@@ -384,25 +384,6 @@ MonoBehaviour:
   sensitivity: 1
   horizontalCameraInputName: LookHorizontal
   verticalCameraInputName: LookVertical
---- !u!1 &475838529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6241408947247850654, guid: 3f3b57ea558d60246acb3fc036d022b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 6241408946783624415}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &475838530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475838529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf00034bbfd1aa4983dfbbf00515ac6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textBox: {fileID: 194529413}
 --- !u!1 &534959313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1202,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 475838530, guid: 3f3b57ea558d60246acb3fc036d022b0, type: 3}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 194529413}
     - target: {fileID: 6241408945647055448, guid: 3f3b57ea558d60246acb3fc036d022b0,
         type: 3}
       propertyPath: originalCameraPivotPosition
@@ -1365,56 +1350,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8293788385264777514, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788385299002256, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788385326639560, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788385604768256, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788385793179146, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788385830578277, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788385840765353, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788385898575313, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788386202364139, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788386291189908, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: loopTimer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8293788386513497052, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1474,16 +1409,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Loop
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788386844232917, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8293788386928255606, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfda3b69c089a9145b7b7cee9a8eb36b, type: 3}
