@@ -9,13 +9,13 @@ public class SpawnPoint : MonoBehaviour
     [SerializeField] Transform originalCameraPivotPosition;
 
     //Get initial spawn point position
-    private void Awake()
+    public void Awake()
     {
-        transform.position = originalCameraPivotPosition.position;
+        //transform.position = originalCameraPivotPosition.position;
     }
 
-    public Transform GetSpawnPoint()
-    {
-        return transform;
-    }
+    //public Transform GetSpawnPoint()
+    //{
+    //    return transform;
+    //}
 }
