@@ -42,6 +42,8 @@ public class LoopManagerScript : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+            respawn.RespawnPlayer();
         StartNextLoop();
         Timer();
     }
@@ -57,16 +59,17 @@ public class LoopManagerScript : MonoBehaviour
 
     public void LoopChange()
     {
-        if (currentLoop > 0)
-        {
-            loopList[currentLoop].SetActive(true);
-            loopList[currentLoop - 1].SetActive(false);
-        }else if(currentLoop == loopList.Count)
+        if (currentLoop == loopList.Count - 1)
         {
             Debug.Log("GameOver");
             loopList[currentLoop].SetActive(false);
             loopList[0].SetActive(true);
             currentLoop = 0;
+        }
+        else if(currentLoop > 0)
+        {
+            loopList[currentLoop].SetActive(true);
+            loopList[currentLoop - 1].SetActive(false);
         }
     }
 
@@ -79,7 +82,7 @@ public class LoopManagerScript : MonoBehaviour
             startTime = loop.GetLoopTimer();
             loopTimer = startTime;
             countdown.SetTimer(startTime);
-            respawn.RespawnPlayer();
+            //respawn.RespawnPlayer();
         }
     }
 
