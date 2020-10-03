@@ -123,6 +123,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &74471329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 74471330}
+  - component: {fileID: 74471332}
+  - component: {fileID: 74471331}
+  m_Layer: 0
+  m_Name: PickableHandle
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &74471330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74471329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2022062142}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!138 &74471331
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74471329}
+  m_ConnectedBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 1
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &74471332
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74471329}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &365104526
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +232,7 @@ GameObject:
   - component: {fileID: 406936798}
   - component: {fileID: 406936799}
   - component: {fileID: 406936797}
+  - component: {fileID: 406936801}
   m_Layer: 0
   m_Name: PlayerPawn
   m_TagString: Untagged
@@ -344,6 +407,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   joystickLookInputMultiplier: 3
+--- !u!114 &406936801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406936793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd57b5e91a5e9d3488595c6a84f593a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickableHandlerJoint: {fileID: 74471331}
 --- !u!1 &472308916
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +1007,7 @@ GameObject:
   - component: {fileID: 1006311388}
   - component: {fileID: 1006311389}
   - component: {fileID: 1006311390}
+  - component: {fileID: 1006311391}
   m_Layer: 8
   m_Name: PhysicsPickable
   m_TagString: Untagged
@@ -1036,6 +1113,18 @@ MonoBehaviour:
   renderer: {fileID: 0}
   materialIndex: 0
   shaderFresnelParameterName: _Fresnel
+--- !u!114 &1006311391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006311385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ede2819efd192e4fbe000d9e5f83595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1038260761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,6 +1830,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534959314}
+  - {fileID: 74471330}
   m_Father: {fileID: 406936795}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
