@@ -36,6 +36,9 @@ public class Picker : MonoBehaviour
 
     public void Drop()
     {
+        if (CurrentPickable == null)
+            return;
+
         pickableHandlerJoint.connectedBody = null;
 
         Vector3 delta = CurrentPickable.transform.position - oldPickablePosition;
