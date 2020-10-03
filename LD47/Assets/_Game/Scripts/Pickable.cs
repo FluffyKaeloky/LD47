@@ -3,20 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Pickable : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+[RequireComponent(typeof(Usable))]
+[RequireComponent(typeof(Rigidbody))]
+public class Pickable : MonoBehaviour
 {
-    public void OnPointerClick(PointerEventData eventData)
+    public Rigidbody Rigidbody { get; private set; } = null;
+
+    private void Awake()
     {
-        Debug.Log("Hello !");
+        Rigidbody = GetComponent<Rigidbody>();
+
+        Usable usable = GetComponent<Usable>();
+
+        usable.onMouseDown.AddListener(Pickup);
+        usable.onMouseUp.AddListener(Drop);
+        usable.onMouseAltDown.AddListener(Throw);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void Pickup(Usable.OnUsableEventArgs args)
     {
-        Debug.Log("Pointer Enter");
+        Picker picker = args.Instigator.GetComponent<Picker>();
+
+        if (picker != null)
+            picker.Pick(this);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void Drop(Usable.OnUsableEventArgs args)
     {
-        Debug.Log("Pointer Exit");
+        Picker picker = args.Instigator.GetComponent<Picker>();
+
+        if (picker != null)
+            picker.Drop();
+    }
+
+    public void Throw(Usable.OnUsableEventArgs args)
+    {
+        Picker picker = args.Instigator.GetComponent<Picker>();
+
+        if (picker != null)
+            picker.Throw();
     }
 }

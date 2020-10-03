@@ -33,8 +33,10 @@ public class RaycastUser : UserControl
         playerInput?.onThrowDown.RemoveListener(UseAltDown);
     }
 
-    private void Update()
+    private async void FixedUpdate()
     {
+        await new WaitForEndOfFrame();
+
         Ray ray = new Ray(playerInput.camera.transform.position, playerInput.camera.transform.forward);
 
         List<RaycastHit> hits = Physics.RaycastAll(ray, useDistance, int.MaxValue, QueryTriggerInteraction.Ignore).OrderBy(x => x.distance).ToList();
