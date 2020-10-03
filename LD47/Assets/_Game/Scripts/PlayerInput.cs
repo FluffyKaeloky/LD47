@@ -55,6 +55,8 @@ public class PlayerInput : SerializedMonoBehaviour
     private void Start()
     {
         UpdatePlayerIndex();
+
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void UpdatePlayerIndex()
