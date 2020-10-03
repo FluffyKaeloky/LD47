@@ -18,9 +18,9 @@ public class LoopManagerScript : MonoBehaviour
     public List<GameObject> loopList = new List<GameObject>();
     public int currentLoop = 0;
 
-    private float startTime = 0.0f;
     private float loopTimer = 0.0f;
 
+    [SerializeField] GameObject player;
     Respawn respawn = null;
     Countdown countdown = null;
     Loop loop = null;
@@ -36,14 +36,11 @@ public class LoopManagerScript : MonoBehaviour
         respawn = GetComponent<Respawn>();
         countdown = GetComponent<Countdown>();
         loop = loopList[currentLoop].GetComponent<Loop>();
-        startTime = loop.GetLoopTimer();
-        loopTimer = startTime;
+        loopTimer = loop.GetLoopTimer();
     }
-    
-    private void FixedUpdate()
+
+    private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-            respawn.RespawnPlayer();
         StartNextLoop();
         Timer();
     }
@@ -77,25 +74,37 @@ public class LoopManagerScript : MonoBehaviour
     {
         if (loopTimer <= 0)
         {
+            player.SetActive(false);
+            loopTimer = loop.GetLoopTimer();
+            respawn.RespawnPlayer();
             GetNextLoop();
             LoopChange();
-            startTime = loop.GetLoopTimer();
-            loopTimer = startTime;
-            countdown.SetTimer(startTime);
-            //respawn.RespawnPlayer();
+            countdown.SetTimer(loopTimer);
+            player.SetActive(true);
+            //StartCoroutine(WaitAndRespawn());
         }
-    }
+}
 
     public void Timer()
     {
-        loopTimer = countdown.TimeDown(loopTimer);
+            loopTimer = countdown.TimeDown(loopTimer);
     }
 
-    //[Button("Respawn")]
-    //private  void TestRespawn()
+    //IEnumerator WaitAndRespawn()
     //{
-    //    //await new WaitForFixedUpdate();
-    //    //await new WaitForEndOfFrame();
+    //    loopTimer = loop.GetLoopTimer();
     //    respawn.RespawnPlayer();
+    //    yield return new WaitForSeconds(0.5f);
+    //    GetNextLoop();
+    //    LoopChange();
+    //    countdown.SetTimer(loopTimer);
     //}
+
+    [Button("Respawn")]
+    private async void TestRespawn()
+    {
+        await new WaitForFixedUpdate();
+        await new WaitForEndOfFrame();
+        respawn.RespawnPlayer();
+    }
 }

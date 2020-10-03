@@ -11,7 +11,7 @@ public class SpawnPoint : MonoBehaviour
     //Get initial spawn point position
     public void Awake()
     {
-        //transform.position = originalCameraPivotPosition.position;
+        transform.position = originalCameraPivotPosition.position;
     }
 
     //public Transform GetSpawnPoint()
