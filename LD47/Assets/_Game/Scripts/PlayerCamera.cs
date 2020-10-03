@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(RewiredPlayer))]
+[RequireComponent(typeof(PlayerInput))]
 public class PlayerCamera : MonoBehaviour
 {
     public Transform horizontalPivot = null;
@@ -19,7 +19,7 @@ public class PlayerCamera : MonoBehaviour
     [FoldoutGroup("InputNames")]
     public string verticalCameraInputName = "LookVertical";
 
-    private RewiredPlayer player = null;
+    private PlayerInput playerInput = null;
 
     private float horizontal, vertical;
 
@@ -27,13 +27,13 @@ public class PlayerCamera : MonoBehaviour
 
     private void Awake()
     {
-        player = GetComponent<RewiredPlayer>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     private void Update()
     {
-        horizontal = player.Player.GetAxis(horizontalCameraInputName);
-        vertical = player.Player.GetAxis(verticalCameraInputName);
+        horizontal = playerInput.GetMouseHorizontal();
+        vertical = playerInput.GetMouseVertical();
     }
 
     private void FixedUpdate()

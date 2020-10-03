@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(RewiredPlayer))]
+[RequireComponent(typeof(PlayerInput))]
 public class PlayerMovements : MonoBehaviour
 {
     public float moveSpeed = 1.0f;
@@ -20,7 +20,7 @@ public class PlayerMovements : MonoBehaviour
 
     private CharacterController controller = null;
 
-    private RewiredPlayer player = null;
+    private PlayerInput playerInput = null;
 
     private float vertical, horizontal;
     private bool walk;
@@ -28,29 +28,18 @@ public class PlayerMovements : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
-        player = GetComponent<RewiredPlayer>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     private void Update()
     {
-        vertical = player.Player.GetAxis(verticalMovementInputName);
-        horizontal = player.Player.GetAxis(horizontalMovementInputName);
-        walk = player.Player.GetButton(walkInputName);
+        vertical = playerInput.GetVertical();
+        horizontal = playerInput.GetHorizontal();
+        walk = playerInput.GetWalk();
     }
 
     private void FixedUpdate()
     {
-        /*Vector3 inputs = new Vector3(horizontal, 0.0f, vertical);
-        Debug.Log("Inputs : " + inputs);
-
-        if (forward != null)
-        {
-            float angle = forward.rotation.eulerAngles.y;
-            Debug.Log("Angle : " + angle);
-            inputs = Quaternion.AngleAxis(angle, Vector3.up) * inputs;
-            Debug.Log("Transformed Inputs : " + inputs);
-        }*/
-
         Vector3 inputs = new Vector3(horizontal, 0.0f, vertical);
 
         inputs = transform.rotation * inputs;
