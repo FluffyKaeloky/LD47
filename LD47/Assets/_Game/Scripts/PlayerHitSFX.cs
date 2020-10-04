@@ -15,6 +15,8 @@ public class PlayerHitSFX : SerializedMonoBehaviour
 
     private Damageable damageable = null;
 
+    public AudioObject deathSfx = null;
+
     private void Awake()
     {
         damageable = GetComponent<Damageable>();
@@ -23,6 +25,10 @@ public class PlayerHitSFX : SerializedMonoBehaviour
     private void Start()
     {
         damageable.onDamageTaken.AddListener(OnDamageTaken);
+        damageable.onDeath.AddListener(() => 
+        {
+            MultiAudioManager.PlayAudioObject(deathSfx, transform.position);
+        });
     }
 
     private void OnDamageTaken(Damageable.DamageTakenEventArgs args)

@@ -53,10 +53,14 @@ public class Damageable : MonoBehaviour
     public float Health { get { return health; }
         set
         {
-            health = Mathf.Max(value, 0.0f);
-            onHealthChanged?.Invoke(new HealthChangedEventArgs(this, health, maxHealth));
+            float previous = health;
 
-            if (health <= 0.0f)
+            health = Mathf.Max(value, 0.0f);
+
+            if (previous != health)
+                onHealthChanged?.Invoke(new HealthChangedEventArgs(this, health, maxHealth));
+
+            if (health <= 0.0f && previous > 0.0f)
                 onDeath?.Invoke();
         }
     }
