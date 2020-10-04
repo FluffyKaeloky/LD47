@@ -1,0 +1,41 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class DisplayPanel : MonoBehaviour
+{
+    [SerializeField]TMP_Text display;
+    int count = 0;
+
+    public void DisplayNumber(int num)
+    {
+        
+        if(count < 5)
+        {
+            display.text += num;
+            count++;
+        }
+        
+        if (count == 5)
+        {
+            if(display.text == "12345")
+            {
+                display.text = "Unlock";
+                count++;
+            }
+            else
+            {
+                StartCoroutine(RetryInput());
+            }
+        }
+    }
+
+    IEnumerator RetryInput()
+    {
+        display.text = "Retry";
+        count = 0;
+        yield return new WaitForSeconds(0.5f);
+        display.text = "";
+    }
+}
