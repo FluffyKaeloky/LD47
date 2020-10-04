@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 874c735515e721444aca622a764d4992, type: 3}
   - {fileID: 8300000, guid: 2bc21827ac355644e8a9cf5716767725, type: 3}
   - {fileID: 8300000, guid: ec3bce614edccd146b6744d1fec331dc, type: 3}
-  volume: 1
+  volume: 0.25
   spread: 0
   pitch: 1
   spatialMode2D: 0
@@ -64,6 +64,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  mixerGroup: {fileID: 0}
+  mixerGroup: {fileID: 243052860578643906, guid: 4b3f3a305952a574191f055c8efa0967,
+    type: 2}
   spatialize: 0
   isBGM: 0

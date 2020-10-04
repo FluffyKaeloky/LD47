@@ -79,8 +79,13 @@ public class Damageable : MonoBehaviour
     public DamageTakenEvent onDamageTaken = new DamageTakenEvent();
     public UnityEvent onDeath = new UnityEvent();
 
+    public bool invincible = false;
+
     public void TakeDamage(float damage, Transform instigator, DamageType damageType)
     {
+        if (invincible)
+            return;
+
         Health -= damage;
 
         onDamageTaken?.Invoke(new DamageTakenEventArgs()

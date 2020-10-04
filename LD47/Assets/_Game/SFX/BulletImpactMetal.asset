@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a63b358e82d544c8f9d76f1200875d, type: 3}
+  m_Name: BulletImpactMetal
+  m_EditorClassIdentifier: 
+  identifier: 
+  clips:
+  - {fileID: 8300000, guid: 553d68c6d6f654c41b9c8c8367422e17, type: 3}
+  - {fileID: 8300000, guid: 54accae3238a36b42a052ab4827f9c96, type: 3}
+  - {fileID: 8300000, guid: de281367d9a84cf40be515aef67dc4d5, type: 3}
+  - {fileID: 8300000, guid: d79c2bf761e2f9243a34a5525466fcbc, type: 3}
+  - {fileID: 8300000, guid: 162382a33db26af43ae2ccfd5cb11129, type: 3}
+  - {fileID: 8300000, guid: 0775872c7dce57a4291a236969a11c36, type: 3}
+  - {fileID: 8300000, guid: 2486f3e70295371458f401b7f6de2311, type: 3}
+  - {fileID: 8300000, guid: 9d7ec4009e4853d4d928103e4d5afa2e, type: 3}
+  - {fileID: 8300000, guid: aa67ae61355c6e94db49d42b7ef5c3b3, type: 3}
+  - {fileID: 8300000, guid: 85a937d23bc3e7f47af368d1d995f59c, type: 3}
+  - {fileID: 8300000, guid: 7a2d60c7a1a274e44bd46799191e1e2a, type: 3}
+  - {fileID: 8300000, guid: 21a48a070d859d74ab831c033483fc3c, type: 3}
+  - {fileID: 8300000, guid: 0f1f787f4aca14e4680890ffd6958a92, type: 3}
+  - {fileID: 8300000, guid: ebdae8d6cf67d4d42a7c560d165510e3, type: 3}
+  - {fileID: 8300000, guid: 931dcceb521ad7f4db1d7bbfd9e8ded2, type: 3}
+  - {fileID: 8300000, guid: c35a36e972e1c034e99f33b467a78080, type: 3}
+  volume: 0.25
+  spread: 0
+  pitch: 1
+  spatialMode2D: 0
+  stereoPan: 0
+  loop: 0
+  playClipsSequentially: 0
+  priority: 128
+  maxSources: 0
+  minDistance: 1
+  maxDistance: 20
+  minPitchMultiplier: 0.9
+  maxPitchMultiplier: 1.1
+  minVolumeMultiplier: 0.8
+  maxVolumeMultiplier: 1.2
+  reverbZoneMix: 1
+  dopplerLevel: 0.25
+  volumeRolloff: 1
+  volumeRolloffCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mixerGroup: {fileID: 243052860578643906, guid: 4b3f3a305952a574191f055c8efa0967,
+    type: 2}
+  spatialize: 1
+  isBGM: 0
