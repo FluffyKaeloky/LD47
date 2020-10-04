@@ -235,6 +235,8 @@ GameObject:
   - component: {fileID: 406936801}
   - component: {fileID: 406936802}
   - component: {fileID: 406936803}
+  - component: {fileID: 406936805}
+  - component: {fileID: 406936804}
   m_Layer: 9
   m_Name: PlayerPawn
   m_TagString: Untagged
@@ -440,9 +442,36 @@ MonoBehaviour:
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
-  onDeath:
+  onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 406936803}
+        m_TargetAssemblyTypeName: ScreenFade, Assembly-CSharp
+        m_MethodName: FadeScreen
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 406936800}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &406936803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,6 +491,169 @@ MonoBehaviour:
   onFadeEnd:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &406936804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406936793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f375381a7fbdca41b1e5a4c920d4677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: hitSfxs
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Damageable+DamageType, Assembly-CSharp],[AlmenaraGames.AudioObject,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Damageable+DamageType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  sfxFallback: {fileID: 11400000, guid: 206377bb6cf6b02488a10ae1fa89b848, type: 2}
+--- !u!114 &406936805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406936793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6214d9bea85c048448741528c759aa86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioObject: {fileID: 11400000, guid: 206377bb6cf6b02488a10ae1fa89b848, type: 2}
+  defaultChannel: -1
+  masterVolume: 1
+  overrideMasterVolume: 0
+  masterVolumeOverride: 1
+  playUpdateMode: 1
+  overridePlayUpdateMode: 0
+  playUpdateModeOverride: 1
+  TargetToFollow: {fileID: 0}
+  Mute: 0
+  OverrideValues: 0
+  overrideRandomVolumeMultiplier: 0
+  randomVolumeMultiplier: 1
+  overrideRandomPitchMultiplier: 0
+  randomPitchMultiplier: 1
+  overrideAudioClip: 0
+  audioClipOverride: {fileID: 0}
+  overrideVolume: 0
+  volumeOverride: 1
+  overridePitch: 0
+  pitchOverride: 1
+  overrideSpatialMode: 0
+  spatialMode2DOverride: 0
+  overrideStereoPan: 0
+  stereoPanOverride: 0
+  overrideSpread: 0
+  spreadOverride: 0
+  overrideDopplerLevel: 0
+  dopplerLevelOverride: 0.25
+  overrideReverbZone: 0
+  reverbZoneMixOverride: 1
+  overrideDistance: 0
+  minDistanceOverride: 1
+  maxDistanceOverride: 20
+  overrideMixerGroup: 0
+  mixerGroupOverride: {fileID: 0}
+  occludeSound: 0
+  overrideOccludeSound: 0
+  occludeSoundOverride: 0
+  delay: 0
+  delayUpdateMode: 0
+  overrideDelayUpdateMode: 0
+  delayUpdateModeOverride: 0
+  overrideVolumeRolloff: 0
+  volumeRolloffOverride: 0
+  volumeRolloffCurveOverride:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  overrideSpatialize: 0
+  spatializeOverride: 0
+  playOnStart: 0
+  fadeInOnStart: 0
+  fadeInOnStartTime: 1
+  ignoreListenerPause: 0
+  overrideIgnoreListenerPause: 0
+  ignoreListenerPauseOverride: 0
+  persistsBetweenScenes: 0
+  paused: 0
+  overridePaused: 0
+  pausedOverride: 0
+  StartDistance: 0
+  outOfRange: 0
+  scene:
+    m_Handle: 0
+  init: 0
+  OnPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStop:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnOutOfRange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLoop:
+    m_PersistentCalls:
+      m_Calls: []
+  callbacksFold: 0
+  usingLogRolloff: 0
 --- !u!1 &472308916
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +1191,6 @@ GameObject:
   - component: {fileID: 834910926}
   - component: {fileID: 834910928}
   - component: {fileID: 834910923}
-  - component: {fileID: 834910927}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1116,25 +1307,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &834910927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834910922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c81e18ba0ed49c44aaab62cebc6164a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: a25843da3fd04dc448edad2dd8792ce2, type: 2}
-  fade: 0
-  color:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
 --- !u!114 &834910928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1484,6 +1656,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ede2819efd192e4fbe000d9e5f83595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickup:
+    m_PersistentCalls:
+      m_Calls: []
+  onDrop:
+    m_PersistentCalls:
+      m_Calls: []
+  onThrow:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1038260761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6214d9bea85c048448741528c759aa86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioObject: {fileID: 0}
+  audioObject: {fileID: 11400000, guid: 8b9f658ff0e147f4e9bda6d0564554d7, type: 2}
   defaultChannel: -1
   masterVolume: 1
   overrideMasterVolume: 0
@@ -1710,7 +1891,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   overrideSpatialize: 0
   spatializeOverride: 0
-  playOnStart: 1
+  playOnStart: 0
   fadeInOnStart: 0
   fadeInOnStartTime: 1
   ignoreListenerPause: 0

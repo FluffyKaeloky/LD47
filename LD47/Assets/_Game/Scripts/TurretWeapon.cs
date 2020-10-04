@@ -92,7 +92,7 @@ public class TurretWeapon : MonoBehaviour
 
                 Damageable damageable = hit.collider.GetComponentInParent<Damageable>();
                 if (damageable != null)
-                    damageable.TakeDamage(damages);
+                    damageable.TakeDamage(damages, transform, Damageable.DamageType.Bullet);
             }
             else
                 target = fireMuzzle.position + fireMuzzle.forward * maxDistance;
