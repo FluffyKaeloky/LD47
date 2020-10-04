@@ -12,12 +12,12 @@ public class DoorEvents : MonoBehaviour
         current = this;
     }
 
-    public event Action onDoorwayTriggerEnter;
-    public void DoorwayTriggerEnter()
-    {
-        if (onDoorwayTriggerEnter != null)
-        {
-            onDoorwayTriggerEnter();
-        }
-    }
+    //public event Action onDoorwayTriggerEnter;
+    //public void DoorwayTriggerEnter()
+    //{
+    //    if (onDoorwayTriggerEnter != null)
+    //    {
+    //        onDoorwayTriggerEnter();
+    //    }
+    //}
 }
