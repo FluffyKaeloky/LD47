@@ -40,10 +40,24 @@ public class TurretAim : Action
 
         if (!idle)
         {
-            Vector3 targetEuler = Quaternion.LookRotation((target.Value.position + targetOffset.Value - transform.position).normalized, transform.up).eulerAngles;
+            Vector3 targetDir = (target.Value.position - transform.position).normalized;
+            Vector3 horizontalTargetDir = Vector3.ProjectOnPlane(targetDir, Vector3.up).normalized;
+            Vector3 verticalTargetDir = Vector3.ProjectOnPlane(targetDir, Vector3.Cross(targetDir, Vector3.up).normalized).normalized;
 
-            horizontalTarget = Quaternion.AngleAxis(targetEuler.y - 180.0f, transform.up);
-            verticalTarget = Quaternion.AngleAxis(targetEuler.x, -transform.right) * Quaternion.AngleAxis(targetEuler.z, transform.forward);
+            Debug.DrawLine(transform.position, transform.position + Vector3.Cross(targetDir, Vector3.up).normalized * 2.0f, Color.cyan);
+            Debug.DrawLine(transform.position, transform.position + horizontalTargetDir * 2.0f, Color.blue);
+            Debug.DrawLine(transform.position, transform.position + verticalTargetDir * 2.0f, Color.red);
+
+            Quaternion originalHorizontalLocalRotation = horizontalPivot.Value.transform.localRotation;
+            horizontalPivot.Value.LookAt(horizontalPivot.Value.position + horizontalTargetDir, -transform.up);
+            horizontalTarget = horizontalPivot.Value.localRotation;
+
+            Quaternion originalVerticalLocalRotation = verticalPivot.Value.transform.localRotation;
+            verticalPivot.Value.LookAt(verticalPivot.Value.position + verticalTargetDir, -transform.up);
+            verticalTarget = verticalPivot.Value.localRotation;
+
+            horizontalPivot.Value.localRotation = originalHorizontalLocalRotation;
+            verticalPivot.Value.localRotation = originalVerticalLocalRotation;
         }
 
         horizontalPivotRotation = Quaternion.Slerp(horizontalPivotRotation, horizontalTarget * Quaternion.Euler(horizontalRotationOffset.Value), Time.fixedDeltaTime * 8.0f);
