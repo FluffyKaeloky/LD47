@@ -1,16 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
+
 [RequireComponent(typeof(Usable))]
 [RequireComponent(typeof(Rigidbody))]
 public class Pickable : MonoBehaviour
 {
+
     public Rigidbody Rigidbody { get; private set; } = null;
 
-    public UnityEvent onPickup = new UnityEvent();
     public UnityEvent onDrop = new UnityEvent();
     public UnityEvent onThrow = new UnityEvent();
 
@@ -32,8 +34,8 @@ public class Pickable : MonoBehaviour
         if (picker != null)
         {
             picker.Pick(this);
-            onPickup?.Invoke();
         }
+
     }
 
     public void Drop(Usable.OnUsableEventArgs args)

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ObjectOpenType
+public enum InteractibleObjectType
 {
     Door,
     Safe,
@@ -10,10 +10,10 @@ public enum ObjectOpenType
     MotherBoard
 }
 
-public class ObjectOpen : ScriptableObject
+public class InteractibleObject : ScriptableObject
 {
     public GameObject prefab;
-    public ObjectOpenType type;
+    public InteractibleObjectType type;
     [TextArea(15, 20)]
     public string description;
 

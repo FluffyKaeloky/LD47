@@ -4,9 +4,9 @@ using System.Globalization;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Key Object", menuName = "Inventory System/Items/Key")]
-public class KeyObject : ItemObject
+public class KeyItem : ItemObject
 {
-    public ObjectOpenType openWhat;
+    public InteractibleObjectType openWhat;
     public int AccessLevel = 0;
     private void Awake()
     {

@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 9164804804683210642}
   - component: {fileID: 9164804804683210643}
   - component: {fileID: 9164804804683210640}
+  - component: {fileID: 9164804804683210669}
   - component: {fileID: 9164804804683210641}
   - component: {fileID: 9164804804683210668}
-  - component: {fileID: 9164804804683210669}
   m_Layer: 0
   m_Name: Door
   m_TagString: DoorVertical
@@ -117,6 +117,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &9164804804683210669
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9164804804683210646}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &9164804804683210641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,22 +160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openTransform: {fileID: 9164804804364081431}
   closeTransform: {fileID: 9164804805089581797}
---- !u!54 &9164804804683210669
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9164804804683210646}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &9164804805089581802
 GameObject:
   m_ObjectHideFlags: 0

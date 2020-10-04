@@ -1,11 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerInput))]
 public class Picker : MonoBehaviour
 {
+    [Serializable]
+    public class UnityEventPickable : UnityEvent<Pickable> { }
+    public UnityEventPickable onPickup = new UnityEventPickable();
+
     public FixedJoint pickableHandlerJoint = null;
 
     public float throwForce = 10.0f;
@@ -32,6 +38,8 @@ public class Picker : MonoBehaviour
         CurrentPickable = pickable;
 
         oldPickablePosition = CurrentPickable.transform.position;
+
+        onPickup.Invoke(pickable);
     }
 
     public void Drop()

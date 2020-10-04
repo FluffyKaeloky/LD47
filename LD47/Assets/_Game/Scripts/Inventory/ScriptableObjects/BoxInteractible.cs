@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Box", menuName = "Inventory System/InteractibleObject/Box")]
-public class BoxInteractible : ObjectOpen
+public class BoxInteractible : InteractibleObject
 {
-    public ItemObject needWhat;
     private void Awake()
     {
-        type = ObjectOpenType.Box;
+        type = InteractibleObjectType.Box;
     }
 }
 

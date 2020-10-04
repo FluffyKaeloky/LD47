@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -23,34 +24,24 @@ public class InventorySystem : MonoBehaviour
 
         //Have Not the item
         if (!hasItem)
-        {
             Container.Add(new InventorySlot(_item, _amount));
-        }
     }
 
-    public bool GetItem(ItemObject _item)
+    public bool GotItem(ItemObject _item)
     {
-        bool hasItemRequired = false;
-
-        for(int j = 0; j < Container.Count; j++)
+        for(int i = 0; i < Container.Count; i++)
         {
-            if (Container[j].item == _item)
+            if(Container[i].item == _item)
             {
-                hasItemRequired = true;
-                break;
-            }
-        }
-
-        if (hasItemRequired)
-        {
-            return true;
+                return true;
+            } 
         }
 
         return false;
     }
 }
 
-[System.Serializable]
+[Serializable]
 public class InventorySlot
 {
     public ItemObject item;

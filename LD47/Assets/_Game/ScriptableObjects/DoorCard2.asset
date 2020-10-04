@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77969eaafed96684896010f6c00fed9d, type: 3}
-  m_Name: DoorKey1
+  m_Name: DoorCard2
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   type: 0
   description: 
-  needWhat: {fileID: 11400000, guid: de965a0b3f541284ca41fe6f4c8a28c0, type: 2}
-  accessLevel: 1
