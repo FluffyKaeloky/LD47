@@ -8,6 +8,9 @@ TagManager:
   - DoorHorizontal
   - DoorRight
   - DoorLeft
+  - Card
+  - Key
+  - Piece
   layers:
   - Default
   - TransparentFX

@@ -3,8 +3,7 @@
 --- !u!1 &4162757303574118181
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6241408947247850654, guid: 3f3b57ea558d60246acb3fc036d022b0,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -23,8 +22,7 @@ GameObject:
 --- !u!4 &4162757303574118182
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6241408947247850652, guid: 3f3b57ea558d60246acb3fc036d022b0,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4162757303574118181}
@@ -38,8 +36,7 @@ Transform:
 --- !u!114 &4162757303574118177
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6241408947247850653, guid: 3f3b57ea558d60246acb3fc036d022b0,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4162757303574118181}
@@ -48,27 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec88cf952b2046748befac6286238b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  loopList: []
   currentLoop: 0
   player: {fileID: 0}
 --- !u!114 &4162757303574118176
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 6241408947247850651, guid: 3f3b57ea558d60246acb3fc036d022b0,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4162757303574118181}
@@ -82,8 +65,7 @@ MonoBehaviour:
 --- !u!114 &4162757303574118183
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 475838530, guid: 3f3b57ea558d60246acb3fc036d022b0,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4162757303574118181}
