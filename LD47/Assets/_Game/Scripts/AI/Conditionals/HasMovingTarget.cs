@@ -29,7 +29,7 @@ public class HasMovingTarget : Conditional
         }
 
         //Player
-        PlayerMovements player = Physics.OverlapSphere(transform.position, detectionRadius, LayerMask.NameToLayer("Player"), QueryTriggerInteraction.Ignore)
+        PlayerMovements player = Physics.OverlapSphere(transform.position, detectionRadius, 1 << LayerMask.NameToLayer("Player"), QueryTriggerInteraction.Ignore)
             .Select(x => x.GetComponentInParent<PlayerMovements>())
             .Where(x => x != null)
             .Distinct()

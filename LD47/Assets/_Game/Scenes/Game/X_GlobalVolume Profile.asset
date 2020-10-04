@@ -146,6 +146,31 @@ MonoBehaviour:
     m_Value: 0
     min: -180
     max: 180
+--- !u!114 &-1753906242366748090
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17c60e5f7cec974a86a1ae9bc8dfc1d, type: 3}
+  m_Name: ScreenFadePostProcessVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  fade:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  color:
+    m_OverrideState: 0
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +188,7 @@ MonoBehaviour:
   - {fileID: -8191389146505757698}
   - {fileID: -6317093128914838993}
   - {fileID: 7463769339888960206}
+  - {fileID: -1753906242366748090}
 --- !u!114 &7463769339888960206
 MonoBehaviour:
   m_ObjectHideFlags: 3

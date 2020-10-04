@@ -84,11 +84,11 @@ public class PlayerInput : SerializedMonoBehaviour
             onThrowUp?.Invoke();
     }
 
-    public float GetHorizontal() => rewiredPlayer.GetAxis(horizontalInputName);
-    public float GetVertical() => rewiredPlayer.GetAxis(verticalInputName);
+    public float GetHorizontal() => enabled ? rewiredPlayer.GetAxis(horizontalInputName) : 0.0f;
+    public float GetVertical() => enabled ? rewiredPlayer.GetAxis(verticalInputName) : 0.0f;
 
-    public float GetMouseHorizontal() => rewiredPlayer.GetAxis(mouseHorizontalInputName) * currentLookMultiplier;
-    public float GetMouseVertical() => rewiredPlayer.GetAxis(mouseVerticalInputName) * currentLookMultiplier;
+    public float GetMouseHorizontal() => enabled ? rewiredPlayer.GetAxis(mouseHorizontalInputName) * currentLookMultiplier : 0.0f;
+    public float GetMouseVertical() => enabled ? rewiredPlayer.GetAxis(mouseVerticalInputName) * currentLookMultiplier : 0.0f;
 
-    public bool GetWalk() => rewiredPlayer.GetButton(walkInputName);
+    public bool GetWalk() => enabled ? rewiredPlayer.GetButton(walkInputName) : false;
 }

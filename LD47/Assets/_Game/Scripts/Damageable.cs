@@ -27,6 +27,27 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    [Serializable]
+    public class DamageTakenEvent : UnityEvent<DamageTakenEventArgs> { }
+
+    [Serializable]
+    public class DamageTakenEventArgs
+    {
+        public Damageable Sender { get; set; } = null;
+
+        public Transform Instigator { get; set; } = null;
+
+        public float Damage { get; set; } = 0.0f;
+        public DamageType DamageType { get; set; } = DamageType.Misc;
+    }
+
+    public enum DamageType
+    {
+        Misc,
+        Fire,
+        Bullet
+    }
+
     #endregion
 
     public float Health { get { return health; }
@@ -55,10 +76,19 @@ public class Damageable : MonoBehaviour
     private float maxHealth = 100.0f;
 
     public HealthChangedEvent onHealthChanged = new HealthChangedEvent();
+    public DamageTakenEvent onDamageTaken = new DamageTakenEvent();
     public UnityEvent onDeath = new UnityEvent();
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Transform instigator, DamageType damageType)
     {
         Health -= damage;
+
+        onDamageTaken?.Invoke(new DamageTakenEventArgs()
+        {
+            Damage = damage,
+            DamageType = damageType,
+            Instigator = instigator,
+            Sender = this
+        });
     }
 }
