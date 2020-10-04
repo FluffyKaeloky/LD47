@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0fae13de6587a5d49908023b07286da0
+guid: 80efd8db3b9f40445ba77ac617ae1ca0
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Light
-    second: {fileID: 2100000, guid: a1e09ab003cf795448693e2d3220d1ef, type: 2}
+      name: CollisionObj
+    second: {fileID: 2100000, guid: af9331c11e5434a46a5ce7e5d8660b60, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -78,7 +78,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -97,7 +97,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   additionalBone: 0
