@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New KeyPad", menuName = "NumericKeyPad/Key")]
+[CreateAssetMenu(fileName = "New KeyPad", menuName = "NumPad/Key")]
 public class KeyPad : ScriptableObject
 {
     public int num;

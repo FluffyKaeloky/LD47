@@ -57,10 +57,10 @@ GameObject:
   - component: {fileID: 1780368948847216856}
   - component: {fileID: 1780368948847216869}
   - component: {fileID: 1780368948847216857}
-  - component: {fileID: 7465500651712354117}
+  - component: {fileID: 4639323509296843391}
   - component: {fileID: 4712899751091978006}
   m_Layer: 0
-  m_Name: Door (2)
+  m_Name: DoorPad01
   m_TagString: DoorVertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7465500651712354117
+--- !u!114 &4639323509296843391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,12 +170,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1780368948847216862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a2b37e465551514fa5af21545a87aed, type: 3}
+  m_Script: {fileID: 11500000, guid: 6754cebdcc420ef4a9f58e9aec924585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactible: {fileID: 11400000, guid: dceb8f9ff901ceb43ba2e7bdd2d68115, type: 2}
-  itemNeed: {fileID: 11400000, guid: 83b8283c0464f164b9185151be217689, type: 2}
-  interactibleManager: {fileID: 4712899751091978006}
+  doorPad: {fileID: 11400000, guid: 2dff6b016eeda1f42b37b93b3c4ea0a7, type: 2}
 --- !u!114 &4712899751091978006
 MonoBehaviour:
   m_ObjectHideFlags: 0

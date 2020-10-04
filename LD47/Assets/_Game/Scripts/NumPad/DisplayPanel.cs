@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using TMPro;
 using UnityEngine;
 
 public class DisplayPanel : MonoBehaviour
 {
+    [SerializeField] DoorPad CorrespondingDoor;
     [SerializeField]TMP_Text display;
     int count = 0;
 
@@ -31,6 +33,10 @@ public class DisplayPanel : MonoBehaviour
         }
     }
 
+    public bool GetDisplay()
+    {
+        return display.text == "Unlock" ? true : false;
+    }
     IEnumerator RetryInput()
     {
         display.text = "Retry";
