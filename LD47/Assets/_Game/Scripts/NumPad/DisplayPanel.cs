@@ -6,13 +6,8 @@ using UnityEngine;
 public class DisplayPanel : MonoBehaviour
 {
     [SerializeField]TMP_Text display;
-    DoorPad doorPad;
     int count = 0;
 
-    private void Awake()
-    {
-        doorPad = GetComponent<DoorPad>();
-    }
     public void DisplayNumber(int num)
     {
         
@@ -36,13 +31,6 @@ public class DisplayPanel : MonoBehaviour
         }
     }
 
-    public bool DoorUnlock()
-    {
-        if(display.text == "Unlock")
-            return true;
-        
-        return false;
-    }
     IEnumerator RetryInput()
     {
         display.text = "Retry";
