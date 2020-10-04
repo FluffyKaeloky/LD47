@@ -611,6 +611,12 @@ Transform:
   m_Father: {fileID: 1366074744}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &514208276 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8293788386513497052, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1235027228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534959313
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +759,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &632239373
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 514208276}
+    m_Modifications:
+    - target: {fileID: 7625565933595419959, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_Name
+      value: Loop 1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419959, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7625565933595419960, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2bcc3c9fee02ed444beb019f712e1fbb, type: 3}
+--- !u!1 &632239374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7625565933595419959, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+    type: 3}
+  m_PrefabInstance: {fileID: 632239373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &834910922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1285,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8293788385156931709, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
+        type: 3}
+      propertyPath: loopTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8293788386513497052, guid: bfda3b69c089a9145b7b7cee9a8eb36b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1706,6 +1797,7 @@ MonoBehaviour:
   - {fileID: 1235027231}
   - {fileID: 1235027230}
   - {fileID: 1235027229}
+  - {fileID: 632239374}
   currentLoop: 0
   player: {fileID: 406936793}
 --- !u!1 &1882931141
