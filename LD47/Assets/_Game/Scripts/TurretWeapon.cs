@@ -90,7 +90,9 @@ public class TurretWeapon : MonoBehaviour
                 if (targetRb != null)
                     targetRb.AddForceAtPosition(ray.direction * pushback, hit.point, ForceMode.Impulse);
 
-                //TODO : Health damages.
+                Damageable damageable = hit.collider.GetComponentInParent<Damageable>();
+                if (damageable != null)
+                    damageable.TakeDamage(damages);
             }
             else
                 target = fireMuzzle.position + fireMuzzle.forward * maxDistance;

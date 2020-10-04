@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 406936799}
   - component: {fileID: 406936797}
   - component: {fileID: 406936801}
+  - component: {fileID: 406936802}
   m_Layer: 0
   m_Name: PlayerPawn
   m_TagString: Untagged
@@ -421,6 +422,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickableHandlerJoint: {fileID: 74471331}
   throwForce: 10
+--- !u!114 &406936802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406936793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b65090333fb12dc47bb0a6a326d26627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &472308916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006311385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.06, y: 3.47, z: 3.3}
+  m_LocalPosition: {x: -3.96, y: 3.47, z: 3.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1912232212}
