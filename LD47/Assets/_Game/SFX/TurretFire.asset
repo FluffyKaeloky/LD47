@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: 
   clips:
-  - {fileID: 8300000, guid: df137e9ec363f2c43b80decda08b5791, type: 3}
-  volume: 1
+  - {fileID: 8300000, guid: 338bc7d63a787644b92451e73c74bf2a, type: 3}
+  - {fileID: 8300000, guid: 31cd12c709ef7ea489619e3d2e0dc919, type: 3}
+  - {fileID: 8300000, guid: 0da49db468a4bc148ad5ecc92c417640, type: 3}
+  - {fileID: 8300000, guid: 0491f04433f6b724cbaa16d19e51581e, type: 3}
+  volume: 0.5
   spread: 0
   pitch: 1
   spatialMode2D: 0
@@ -24,8 +27,8 @@ MonoBehaviour:
   playClipsSequentially: 0
   priority: 128
   maxSources: 0
-  minDistance: 1
-  maxDistance: 20
+  minDistance: 10
+  maxDistance: 40
   minPitchMultiplier: 0.9
   maxPitchMultiplier: 1.1
   minVolumeMultiplier: 0.8

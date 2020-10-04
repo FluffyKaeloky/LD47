@@ -8,19 +8,16 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 [RequireComponent(typeof(Damageable))]
-[RequireComponent(typeof(MultiAudioSource))]
 public class PlayerHitSFX : SerializedMonoBehaviour
 {
     public AudioObject sfxFallback = null;
     public Dictionary<Damageable.DamageType, AudioObject> hitSfxs = new Dictionary<Damageable.DamageType, AudioObject>();
 
     private Damageable damageable = null;
-    private MultiAudioSource audioSource = null;
 
     private void Awake()
     {
         damageable = GetComponent<Damageable>();
-        audioSource = GetComponent<MultiAudioSource>();
     }
 
     private void Start()
@@ -34,7 +31,6 @@ public class PlayerHitSFX : SerializedMonoBehaviour
         if (hitSfxs.ContainsKey(args.DamageType))
             sfx = hitSfxs[args.DamageType];
 
-        audioSource.AudioObject = sfx;
-        audioSource.Play();
+        MultiAudioManager.PlayAudioObject(sfx, transform.position);
     }
 }

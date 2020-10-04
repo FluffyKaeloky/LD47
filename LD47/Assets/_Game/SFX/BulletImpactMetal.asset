@@ -10,18 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50a63b358e82d544c8f9d76f1200875d, type: 3}
-  m_Name: Bullet_impact_body
+  m_Name: BulletImpactMetal
   m_EditorClassIdentifier: 
   identifier: 
   clips:
-  - {fileID: 8300000, guid: 71de0983701a7ea4da895a5832c1f9d9, type: 3}
-  - {fileID: 8300000, guid: ab2cf140114a08e4bbfffb363e03ea1b, type: 3}
-  - {fileID: 8300000, guid: f8ac5ddf9b7aabf46a07f8f5a593b637, type: 3}
-  - {fileID: 8300000, guid: 05ba4324da45e8c408a8acb4c49b82d3, type: 3}
-  - {fileID: 8300000, guid: 7121ce6abf9b1e94a81e64025dce7430, type: 3}
-  - {fileID: 8300000, guid: 874c735515e721444aca622a764d4992, type: 3}
-  - {fileID: 8300000, guid: 2bc21827ac355644e8a9cf5716767725, type: 3}
-  - {fileID: 8300000, guid: ec3bce614edccd146b6744d1fec331dc, type: 3}
+  - {fileID: 8300000, guid: 553d68c6d6f654c41b9c8c8367422e17, type: 3}
+  - {fileID: 8300000, guid: 54accae3238a36b42a052ab4827f9c96, type: 3}
+  - {fileID: 8300000, guid: de281367d9a84cf40be515aef67dc4d5, type: 3}
+  - {fileID: 8300000, guid: d79c2bf761e2f9243a34a5525466fcbc, type: 3}
+  - {fileID: 8300000, guid: 162382a33db26af43ae2ccfd5cb11129, type: 3}
+  - {fileID: 8300000, guid: 0775872c7dce57a4291a236969a11c36, type: 3}
+  - {fileID: 8300000, guid: 2486f3e70295371458f401b7f6de2311, type: 3}
+  - {fileID: 8300000, guid: 9d7ec4009e4853d4d928103e4d5afa2e, type: 3}
+  - {fileID: 8300000, guid: aa67ae61355c6e94db49d42b7ef5c3b3, type: 3}
+  - {fileID: 8300000, guid: 85a937d23bc3e7f47af368d1d995f59c, type: 3}
+  - {fileID: 8300000, guid: 7a2d60c7a1a274e44bd46799191e1e2a, type: 3}
+  - {fileID: 8300000, guid: 21a48a070d859d74ab831c033483fc3c, type: 3}
+  - {fileID: 8300000, guid: 0f1f787f4aca14e4680890ffd6958a92, type: 3}
+  - {fileID: 8300000, guid: ebdae8d6cf67d4d42a7c560d165510e3, type: 3}
+  - {fileID: 8300000, guid: 931dcceb521ad7f4db1d7bbfd9e8ded2, type: 3}
+  - {fileID: 8300000, guid: c35a36e972e1c034e99f33b467a78080, type: 3}
   volume: 0.25
   spread: 0
   pitch: 1
@@ -66,5 +74,5 @@ MonoBehaviour:
     m_RotationOrder: 4
   mixerGroup: {fileID: 243052860578643906, guid: 4b3f3a305952a574191f055c8efa0967,
     type: 2}
-  spatialize: 0
+  spatialize: 1
   isBGM: 0
