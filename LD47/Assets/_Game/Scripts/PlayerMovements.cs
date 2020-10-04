@@ -22,8 +22,10 @@ public class PlayerMovements : MonoBehaviour
 
     private PlayerInput playerInput = null;
 
-    private float vertical, horizontal;
-    private bool walk;
+    public float Vertical { get; private set; } = 0.0f;
+    public float Horizontal { get; private set; } = 0.0f;
+
+    public bool IsWalking { get; private set; } = false;
 
     private void Awake()
     {
@@ -33,19 +35,19 @@ public class PlayerMovements : MonoBehaviour
 
     private void Update()
     {
-        vertical = playerInput.GetVertical();
-        horizontal = playerInput.GetHorizontal();
-        walk = playerInput.GetWalk();
+        Vertical = playerInput.GetVertical();
+        Horizontal = playerInput.GetHorizontal();
+        IsWalking = playerInput.GetWalk();
     }
 
     private void FixedUpdate()
     {
-        Vector3 inputs = new Vector3(horizontal, 0.0f, vertical);
+        Vector3 inputs = new Vector3(Horizontal, 0.0f, Vertical);
 
         inputs = transform.rotation * inputs;
 
         Vector3 delta = new Vector3(moveSpeed * inputs.x, 0.0f, moveSpeed * inputs.z) + (Physics.gravity * Time.fixedDeltaTime);
-        delta.Scale(walk ? Vector3.one * walkMultiplier : Vector3.one);
+        delta.Scale(IsWalking ? Vector3.one * walkMultiplier : Vector3.one);
 
         controller.Move(delta);
     }
