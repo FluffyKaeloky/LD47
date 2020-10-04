@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.VFX;
 
 public class TurretWeapon : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class TurretWeapon : MonoBehaviour
     public UnityEvent onStartFire = new UnityEvent();
     public UnityEvent onBulletFired = new UnityEvent();
     public UnityEvent onEndFire = new UnityEvent();
+
+    public VisualEffect fireMuzzleVFX = null;
+    public string fireMuzzleVFXEventName = "Fire";
 
     private Coroutine fireCoroutine = null;
 
@@ -102,6 +106,9 @@ public class TurretWeapon : MonoBehaviour
             //TODO : Use target for VFX ?
 
             onBulletFired?.Invoke();
+
+            if (fireMuzzleVFX != null)
+                fireMuzzleVFX.SendEvent(fireMuzzleVFXEventName);
         }
     }
 }
