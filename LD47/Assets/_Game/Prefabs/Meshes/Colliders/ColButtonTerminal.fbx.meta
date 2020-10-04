@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 5e710724ac27d3a45bce11ba8a84928f
+guid: 5456ab161924aff4687d0f2cf25babb7
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CollisionObj
-    second: {fileID: 2100000, guid: bad50ca78e38859429c349e81af84c83, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
