@@ -49,6 +49,14 @@ public class LoopManagerScript : MonoBehaviour
     {
         if (loopList[0].startClip != null)
             annoucerSource.PlayOverride(loopList[0].startClip);
+
+        for(int i = 0; i < loopList.Count; i++)
+        {
+            loopList[i].gameObject.SetActive(false);
+        }
+        currentLoop = 0;
+        loopList[currentLoop].gameObject.SetActive(true);
+                
     }
 
     private void Update()
@@ -68,19 +76,17 @@ public class LoopManagerScript : MonoBehaviour
 
     public void LoopChange()
     {
-        if (currentLoop == loopList.Count - 1)
+        if (currentLoop >= loopList.Count)
         {
             Debug.Log("GameOver");
             loopList[currentLoop].gameObject.SetActive(false);
             loopList[0].gameObject.SetActive(true);
-            loopTimer = loop.GetLoopTimer();
             currentLoop = 0;
         }
         else if(currentLoop > 0)
         {
             loopList[currentLoop].gameObject.SetActive(true);
             loopList[currentLoop - 1].gameObject.SetActive(false);
-            loopTimer = loopList[currentLoop].GetLoopTimer();
 
             if (loopList[currentLoop].startClip != null)
                 annoucerSource.PlayOverride(loopList[currentLoop].startClip);
@@ -97,6 +103,7 @@ public class LoopManagerScript : MonoBehaviour
             respawn.RespawnPlayer();
             GetNextLoop();
             LoopChange();
+            loopTimer = loopList[currentLoop].GetLoopTimer();
             Debug.Log(loopTimer);
             countdown.SetTimer(loopTimer);
             player.SetActive(true);
