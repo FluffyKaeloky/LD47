@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class RespawnOnFall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Transform SpawnPoint;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        other.transform.position = SpawnPoint.position;
     }
 }
