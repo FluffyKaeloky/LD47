@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 3857079213919423802}
   - component: {fileID: 5379818540974625446}
   - component: {fileID: 7806330688525073141}
+  - component: {fileID: 1696374211}
   m_Layer: 0
-  m_Name: DoorCard2 (1)
+  m_Name: DoorCard1
   m_TagString: DoorVertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3857079213919423805}
-  m_LocalRotation: {x: -0, y: -0.7175902, z: -0, w: 0.6964656}
+  m_LocalRotation: {x: 0, y: -0.7175916, z: 0, w: 0.6964642}
   m_LocalPosition: {x: 18.4, y: 4.73, z: -1.2}
   m_LocalScale: {x: 10, y: 10, z: 0.5}
   m_Children:
@@ -131,7 +132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: {fileID: 11400000, guid: d8f5d3c4ae473594dbf6c3cae1b71135, type: 2}
   itemNeed: {fileID: 11400000, guid: 7b07dd8fee136dd4aad0f412aa370887, type: 2}
-  interactibleManager: {fileID: 7806330688525073141}
 --- !u!114 &7806330688525073141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +146,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openTransform: {fileID: 3857079214674037692}
   closeTransform: {fileID: 3857079214351190094}
+--- !u!114 &1696374211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857079213919423805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74deb1d62800f274c870dd9df309be0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioObject: {fileID: 11400000, guid: bccfa8a169d0b2c4a88a3142c95ecd25, type: 2}
 --- !u!1 &3857079214351190081
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,8 +7,11 @@ public class Interactible : MonoBehaviour
 {
     public InteractibleObject interactible;
     public ItemObject itemNeed;
-    public InteractibleManager interactibleManager;
-
+    InteractibleManager interactibleManager;
+    private void Awake()
+    {
+        interactibleManager = GetComponent<InteractibleManager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")

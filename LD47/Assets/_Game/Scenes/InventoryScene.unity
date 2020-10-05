@@ -980,6 +980,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  invincible: 0
 --- !u!114 &406936803
 MonoBehaviour:
   m_ObjectHideFlags: 0
