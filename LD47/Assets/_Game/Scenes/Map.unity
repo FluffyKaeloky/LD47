@@ -10839,6 +10839,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1219131761}
     m_Modifications:
+    - target: {fileID: 249414807, guid: 119b042c1483f434191ed762e5c06d35, type: 3}
+      propertyPath: canvasGroup
+      value: 
+      objectReference: {fileID: 8721617174362882165}
+    - target: {fileID: 249414807, guid: 119b042c1483f434191ed762e5c06d35, type: 3}
+      propertyPath: textGroup
+      value: 
+      objectReference: {fileID: 8721617174362882164}
     - target: {fileID: 3188872037503363980, guid: 119b042c1483f434191ed762e5c06d35,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -110110,3 +110118,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4bba44d2f42ff64bbea981e4dcbe37e, type: 3}
+--- !u!225 &8721617174362882164 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 8795922380395811242, guid: a4bba44d2f42ff64bbea981e4dcbe37e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8721617174362882163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &8721617174362882165 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 907998728104688895, guid: a4bba44d2f42ff64bbea981e4dcbe37e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8721617174362882163}
+  m_PrefabAsset: {fileID: 0}
