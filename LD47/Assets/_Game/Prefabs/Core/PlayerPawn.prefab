@@ -278,6 +278,7 @@ MonoBehaviour:
       m_Calls: []
   pickableHandlerJoint: {fileID: 8455195314263603388}
   throwForce: 10
+  forceDropForce: 1200
 --- !u!114 &8455195313790759933
 MonoBehaviour:
   m_ObjectHideFlags: 0
