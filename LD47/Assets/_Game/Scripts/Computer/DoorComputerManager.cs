@@ -12,17 +12,23 @@ public class DoorComputerManager : MonoBehaviour
     {
         interactibleManager = GetComponent<InteractibleManager>();
     }
-    private void OnTriggerEnter(Collider other)
+
+    public void OpenComputerDoor()
     {
-        if (other.tag == "Player")
-            if (computer.UnlockDoorComputer())
-                interactibleManager.Open();
+            interactibleManager.Open();
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-            if (computer.UnlockDoorComputer())
-                interactibleManager.Close();
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "Player")
+    //        if (computer.UnlockDoorComputer())
+    //            interactibleManager.Open();
+    //}
+
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.tag == "Player")
+    //        if (computer.UnlockDoorComputer())
+    //            interactibleManager.Close();
+    //}
 }
