@@ -106,7 +106,7 @@ public class LoopManagerScript : MonoBehaviour
             Debug.Log("GameOver");
             //loopList[currentLoop].gameObject.SetActive(false);
             //loopList[0].gameObject.SetActive(true);
-            //currentLoop = 0;
+            currentLoop = 0;
             MultiAudioManager.PlayAudioObject(deathSFX, transform.position);
             await new WaitForSeconds(deathSFX.clips[0].length + 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

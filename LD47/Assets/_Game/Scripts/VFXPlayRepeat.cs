@@ -20,6 +20,7 @@ public class VFXPlayRepeat : MonoBehaviour
     {
         while (true)
         {
+            if (this == null) return;
             vfx.Play();
 
             await new WaitForSeconds(Random.Range(minDelay, maxDelay));
