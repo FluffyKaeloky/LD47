@@ -104743,16 +104743,6 @@ PrefabInstance:
       objectReference: {fileID: 157496346}
     - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
         type: 3}
-      propertyPath: loopList.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 157496346}
-    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
-        type: 3}
       propertyPath: loopList.Array.data[0]
       value: 
       objectReference: {fileID: 1491449789}
@@ -104771,6 +104761,11 @@ PrefabInstance:
       propertyPath: loopList.Array.data[3]
       value: 
       objectReference: {fileID: 452824438}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 157496346}
     - target: {fileID: 4162757303574118181, guid: 3d01a2ae676ac344fbb472ada7746448,
         type: 3}
       propertyPath: m_Name
