@@ -11,6 +11,8 @@ public class InteractibleManager : MonoBehaviour
     [SerializeField] public bool DownUp = false;
     [SerializeField] public bool LeftRight = false;
     [SerializeField] public bool RightLeft = false;
+    public float animationTime = 1.5f;
+    Vector3 originalPos;
 
     Vector3 dimension;
     PooledSFXPlayer sfx;
@@ -18,35 +20,36 @@ public class InteractibleManager : MonoBehaviour
     private void Awake()
     {
         sfx = GetComponent<PooledSFXPlayer>();
-        dimension = GetComponent<Renderer>().bounds.size / 2;
+        dimension = GetComponentInChildren<Renderer>().bounds.size / 2;
+        originalPos = transform.position;
     }
     public void Open()
     {
         if (UpDown)
-             transform.DOMove(new Vector3(transform.position.x, transform.position.y + dimension.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+             transform.DOMove(new Vector3(transform.position.x, transform.position.y + dimension.y, transform.position.z), animationTime).SetEase(Ease.OutExpo);
         else if (DownUp)
-            transform.DOMove(new Vector3(transform.position.x, transform.position.y - dimension.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(new Vector3(transform.position.x, transform.position.y - dimension.y, transform.position.z), animationTime).SetEase(Ease.OutExpo);
         else if (LeftRight)
-            transform.DOMove(new Vector3(transform.position.x - dimension.y, transform.position.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(new Vector3(transform.position.x - dimension.y, transform.position.y, transform.position.z), animationTime).SetEase(Ease.OutExpo);
         else if (RightLeft)
-            transform.DOMove(new Vector3(transform.position.x + dimension.y, transform.position.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(new Vector3(transform.position.x + dimension.y, transform.position.y, transform.position.z), animationTime).SetEase(Ease.OutExpo);
         else
-            transform.DOMove(new Vector3(transform.position.x, transform.position.y + dimension.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(new Vector3(transform.position.x, transform.position.y + dimension.y, transform.position.z), animationTime).SetEase(Ease.OutExpo);
         sfx.Play();
     }
 
     public void Close()
     {
         if (UpDown)
-            transform.DOMove(new Vector3(transform.position.x, transform.position.y - dimension.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(originalPos, animationTime).SetEase(Ease.OutExpo);
         else if (DownUp)
-            transform.DOMove(new Vector3(transform.position.x, transform.position.y + dimension.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(originalPos, animationTime).SetEase(Ease.OutExpo);
         else if (LeftRight)
-            transform.DOMove(new Vector3(transform.position.x + dimension.y, transform.position.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(originalPos, animationTime).SetEase(Ease.OutExpo);
         else if (RightLeft)
-            transform.DOMove(new Vector3(transform.position.x - dimension.y, transform.position.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(originalPos, animationTime).SetEase(Ease.OutExpo);
         else
-            transform.DOMove(new Vector3(transform.position.x, transform.position.y - dimension.y, transform.position.z), 1.0f).SetEase(Ease.OutExpo);
+            transform.DOMove(originalPos, animationTime).SetEase(Ease.OutExpo);
         sfx.Play();
     }
 
