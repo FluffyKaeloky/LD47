@@ -10817,6 +10817,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 249414804}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &249414806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3188872037739788154, guid: 119b042c1483f434191ed762e5c06d35,
+    type: 3}
+  m_PrefabInstance: {fileID: 249414804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &249414807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249414806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9f73bcca8d99f478473eee6138be5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 8721617174362882165}
+  textGroup: {fileID: 8721617174362882164}
+  victoryAnnoucement: {fileID: 11400000, guid: 01dbd726221dc50409ee47d841a601c4, type: 2}
+  delay: 6
 --- !u!1001 &251474097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20466,7 +20488,7 @@ PrefabInstance:
     - target: {fileID: 4579105781827089258, guid: 83e0592e73d82c541aeb6d62117b6712,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4579105781827089258, guid: 83e0592e73d82c541aeb6d62117b6712,
         type: 3}
@@ -40617,7 +40639,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 44.262, y: -218.796, z: -14.374}
 --- !u!1001 &823056316
 PrefabInstance:
@@ -53695,7 +53717,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 33.394, y: -179.334, z: 2.326}
 --- !u!1001 &1101918195
 PrefabInstance:
@@ -61530,7 +61552,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 30.332, y: -90, z: -90}
 --- !u!1001 &1222592308
 PrefabInstance:
@@ -70080,7 +70102,7 @@ PrefabInstance:
     - target: {fileID: 4579105781827089258, guid: 83e0592e73d82c541aeb6d62117b6712,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4579105781827089258, guid: 83e0592e73d82c541aeb6d62117b6712,
         type: 3}
@@ -73690,7 +73712,7 @@ Transform:
   - {fileID: 633334395}
   - {fileID: 1554924569}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1460037732
 PrefabInstance:
@@ -96619,7 +96641,7 @@ PrefabInstance:
     - target: {fileID: 4579105781827089258, guid: 83e0592e73d82c541aeb6d62117b6712,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4579105781827089258, guid: 83e0592e73d82c541aeb6d62117b6712,
         type: 3}
@@ -105411,7 +105433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 30.332, y: -226.139, z: -90}
 --- !u!1001 &2112412103
 PrefabInstance:
@@ -108520,5 +108542,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8721617174190631581, guid: a4bba44d2f42ff64bbea981e4dcbe37e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4bba44d2f42ff64bbea981e4dcbe37e, type: 3}
+--- !u!225 &8721617174362882164 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 8795922380395811242, guid: a4bba44d2f42ff64bbea981e4dcbe37e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8721617174362882163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &8721617174362882165 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 907998728104688895, guid: a4bba44d2f42ff64bbea981e4dcbe37e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8721617174362882163}
+  m_PrefabAsset: {fileID: 0}
