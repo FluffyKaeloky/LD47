@@ -26,7 +26,7 @@ public class InteractibleManager : MonoBehaviour
     public void Open()
     {
         if (UpDown)
-             transform.DOMove(new Vector3(transform.position.x, transform.position.y + dimension.y, transform.position.z), animationTime).SetEase(Ease.OutExpo);
+             transform.DOMove(new Vector3(transform.position.x, transform.position.y + (dimension.y*2), transform.position.z), animationTime).SetEase(Ease.OutExpo);
         else if (DownUp)
             transform.DOMove(new Vector3(transform.position.x, transform.position.y - dimension.y, transform.position.z), animationTime).SetEase(Ease.OutExpo);
         else if (LeftRight)
