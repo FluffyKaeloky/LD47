@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 3718270859211047955}
   - component: {fileID: 3718270859211047964}
   - component: {fileID: 657353238}
+  - component: {fileID: 801953830}
   m_Layer: 0
   m_Name: DamageableDuctEntrance
   m_TagString: Untagged
@@ -227,6 +228,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 801953830}
+        m_TargetAssemblyTypeName: InstantiateObject, Assembly-CSharp
+        m_MethodName: Instantiate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   invincible: 0
 --- !u!54 &657353238
 Rigidbody:
@@ -244,6 +257,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &801953830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3718270859211047966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40fa20f95af472e428037bf06c744ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3023652277488680377, guid: e029759f003e4bb4493aad8cc373ccf1, type: 3}
+  instantiateOnStart: 0
+  offset: {x: 0, y: 0.05, z: 0}
+  destroyTimer: 10
 --- !u!1001 &3718270859010551920
 PrefabInstance:
   m_ObjectHideFlags: 0
