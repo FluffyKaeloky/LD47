@@ -10809,6 +10809,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7943987599668665824, guid: 119b042c1483f434191ed762e5c06d35,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 7943987599668665824, guid: 119b042c1483f434191ed762e5c06d35,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119b042c1483f434191ed762e5c06d35, type: 3}
 --- !u!4 &249414805 stripped
@@ -72147,7 +72153,7 @@ PrefabInstance:
     - target: {fileID: 1208348652498131961, guid: c357ac081de15ce409cb6ac073ddd537,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1208348652498131961, guid: c357ac081de15ce409cb6ac073ddd537,
         type: 3}
@@ -87196,7 +87202,7 @@ PrefabInstance:
     - target: {fileID: 8144247474666641471, guid: 3b46be9e2b10c5040b81f2ea637109e1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8144247474666641471, guid: 3b46be9e2b10c5040b81f2ea637109e1,
         type: 3}
@@ -102468,7 +102474,7 @@ Transform:
   - {fileID: 1542788555}
   - {fileID: 428445972}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2050273067
 PrefabInstance:
@@ -107218,7 +107224,7 @@ PrefabInstance:
     - target: {fileID: 4162757303574118182, guid: 3d01a2ae676ac344fbb472ada7746448,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4162757303574118182, guid: 3d01a2ae676ac344fbb472ada7746448,
         type: 3}
@@ -107912,7 +107918,7 @@ PrefabInstance:
     - target: {fileID: 109009365359145042, guid: 940efcfe151ec204db4928a78509ba1d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 109009365359145042, guid: 940efcfe151ec204db4928a78509ba1d,
         type: 3}
@@ -108500,6 +108506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Card01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911077462162794604, guid: 571e0a8cb86f6244489dddde80248355,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 571e0a8cb86f6244489dddde80248355, type: 3}
