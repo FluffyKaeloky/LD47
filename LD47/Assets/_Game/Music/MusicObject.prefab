@@ -277,4 +277,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item_proximity: 0
   player_health: 1
+  playerDamageable: {fileID: 0}
   audio_mixer: {fileID: 24100000, guid: 4b3f3a305952a574191f055c8efa0967, type: 2}
