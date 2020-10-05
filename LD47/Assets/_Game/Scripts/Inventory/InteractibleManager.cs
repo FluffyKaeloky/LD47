@@ -11,7 +11,7 @@ public class InteractibleManager : MonoBehaviour
     [SerializeField] public bool DownUp = false;
     [SerializeField] public bool LeftRight = false;
     [SerializeField] public bool RightLeft = false;
-    public float animationTime = 0.6f;
+    public float animationTime = 0.2f;
     Vector3 originalPos;
 
     Vector3 dimension;
