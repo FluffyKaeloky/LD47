@@ -25,7 +25,7 @@ MonoBehaviour:
   priority: 128
   maxSources: 0
   minDistance: 1
-  maxDistance: 20
+  maxDistance: 8
   minPitchMultiplier: 1
   maxPitchMultiplier: 1
   minVolumeMultiplier: 1

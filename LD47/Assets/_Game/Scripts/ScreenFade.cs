@@ -30,10 +30,10 @@ public class ScreenFade : MonoBehaviour
         mat.SetFloat("_Fade", 0.0f);
     }
 
-    public void FadeScreen(bool state)
+    public void FadeScreen(bool state, float? duration = null)
     {
         mat.SetColor("_FadeColor", color);
-        mat.DOFloat(state ? 1.0f : 0.0f, "_Fade", duration);
+        mat.DOFloat(state ? 1.0f : 0.0f, "_Fade", duration != null ? duration.Value : this.duration);
     }
 
     [Button("Fade Now")]

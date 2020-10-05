@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4162757303574118176}
   - component: {fileID: 4162757303574118183}
   - component: {fileID: 143484454481733521}
+  - component: {fileID: 1556001107}
   m_Layer: 0
   m_Name: LoopManager
   m_TagString: Untagged
@@ -101,3 +102,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endLoopSFX: {fileID: 11400000, guid: 1c57df7c1ff67c7409a1c6ef16835b78, type: 2}
   startLoopSFX: {fileID: 11400000, guid: a63bc1f21487ffd408e5d99de12d93f5, type: 2}
+--- !u!114 &1556001107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162757303574118181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092f5d53e0192d443b51a08c8313b5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: ce6a3d7de6236c7429b0185ca953d004, type: 2}
+  playOnStart: 0
+  color: {r: 1, g: 1, b: 1, a: 1}
+  duration: 1
+  onFadeEnd:
+    m_PersistentCalls:
+      m_Calls: []
