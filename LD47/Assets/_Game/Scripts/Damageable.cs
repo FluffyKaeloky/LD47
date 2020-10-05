@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sirenix.OdinInspector;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -103,5 +104,11 @@ public class Damageable : MonoBehaviour
             Instigator = instigator,
             Sender = this
         });
+    }
+
+    [Button("Kill")]
+    private void DebugKill()
+    {
+        TakeDamage(100000, transform, DamageType.Misc);
     }
 }
