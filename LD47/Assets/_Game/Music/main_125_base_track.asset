@@ -24,8 +24,8 @@ MonoBehaviour:
   playClipsSequentially: 1
   priority: 128
   maxSources: 0
-  minDistance: 1
-  maxDistance: 20
+  minDistance: 1000
+  maxDistance: 1000
   minPitchMultiplier: 1
   maxPitchMultiplier: 1
   minVolumeMultiplier: 1
@@ -60,4 +60,4 @@ MonoBehaviour:
   mixerGroup: {fileID: 243318579703096844, guid: 4b3f3a305952a574191f055c8efa0967,
     type: 2}
   spatialize: 0
-  isBGM: 0
+  isBGM: 1

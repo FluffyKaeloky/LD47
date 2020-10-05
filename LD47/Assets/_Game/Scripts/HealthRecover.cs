@@ -36,7 +36,7 @@ public class HealthRecover : MonoBehaviour
     {
         timer = Mathf.Max(0.0f, timer - Time.deltaTime);
 
-        if (timer == 0.0f && damageable.Health < damageable.MaxHealth)
+        if (timer == 0.0f && damageable.Health < damageable.MaxHealth && damageable.Health > 0.0f)
         {
             tween = DOTween.To((value) => { damageable.Health = value; }, damageable.Health, damageable.MaxHealth, recoverDuration)
                 .SetEase(Ease.OutCubic);

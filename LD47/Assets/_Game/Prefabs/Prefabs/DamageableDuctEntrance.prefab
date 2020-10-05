@@ -27,7 +27,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1241606944891195395}
   m_Father: {fileID: 3718270859211047955}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42,8 +43,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.052484512, y: 2.2071812, z: 1.2071152}
-  m_Center: {x: -0.029235296, y: 1.1065828, z: -0.0029585361}
+  m_Size: {x: 0.052484512, y: 1.128547, z: 1.2071152}
+  m_Center: {x: -0.029235296, y: 0.5672656, z: -0.0029585361}
 --- !u!1 &1518370578
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +274,50 @@ MonoBehaviour:
   instantiateOnStart: 0
   offset: {x: 0, y: 0.05, z: 0}
   destroyTimer: 10
+--- !u!1 &3944827443339256877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241606944891195395}
+  - component: {fileID: 1280636769160701522}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1241606944891195395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944827443339256877}
+  m_LocalRotation: {x: 0.00000078976154, y: -0.00000014901161, z: 0.33219963, w: 0.9432092}
+  m_LocalPosition: {x: -0.334, y: 1.536, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 606102444}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 38.805}
+--- !u!65 &1280636769160701522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3944827443339256877}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07078552, y: 1.1155854, z: 1.1912382}
+  m_Center: {x: -0.023290198, y: 0.011036041, z: -0.012258114}
 --- !u!1001 &3718270859010551920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -350,6 +395,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: 2a46e5887dcc03648a542a2f9e25cc0c,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 209739705466369167, guid: f3d7f26dff2238146b83d5ead9c1a77e,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: 2a46e5887dcc03648a542a2f9e25cc0c,
         type: 3}
       propertyPath: m_Name
