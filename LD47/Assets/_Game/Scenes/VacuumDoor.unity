@@ -1118,6 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 11400000, guid: e11e2c1eab97f3541a91d80351262a2f, type: 2}
+  doorOpen: {fileID: 0}
 --- !u!1001 &286077634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4501,6 +4502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrespondingDoor: {fileID: 0}
   display: {fileID: 614161607}
+  door: {fileID: 0}
 --- !u!4 &1232729706
 Transform:
   m_ObjectHideFlags: 0
@@ -5113,6 +5115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CorrespondingDoor: {fileID: 0}
   display: {fileID: 624161452}
+  door: {fileID: 0}
 --- !u!1 &1275661914
 GameObject:
   m_ObjectHideFlags: 0
