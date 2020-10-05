@@ -11441,7 +11441,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startClip
       value: 
-      objectReference: {fileID: 8300000, guid: 3aac9c950cfa94f45884dd612aa119c7, type: 3}
+      objectReference: {fileID: 8300000, guid: 35d0e2946e7a3c742b2d65d462567398, type: 3}
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
       propertyPath: loopTimer
@@ -31097,7 +31097,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startClip
       value: 
-      objectReference: {fileID: 8300000, guid: 0b7fa953cd5dbbc4f851941be4777192, type: 3}
+      objectReference: {fileID: 8300000, guid: 3aac9c950cfa94f45884dd612aa119c7, type: 3}
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
       propertyPath: loopTimer
@@ -79027,7 +79027,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startClip
       value: 
-      objectReference: {fileID: 8300000, guid: fc5f32b253d911c4c84f3dec188fc000, type: 3}
+      objectReference: {fileID: 8300000, guid: d9ca7e6b055f155438a95e0357eeda24, type: 3}
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
       propertyPath: loopTimer
@@ -106014,7 +106014,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startClip
       value: 
-      objectReference: {fileID: 8300000, guid: fc5f32b253d911c4c84f3dec188fc000, type: 3}
+      objectReference: {fileID: 8300000, guid: bcf000733b0119447b3be4c7a3342e56, type: 3}
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
       propertyPath: loopTimer
