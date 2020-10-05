@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using TMPro;
 using UnityEngine;
 
 public class Interactible : MonoBehaviour
 {
+   
     public InteractibleObject interactible;
     public ItemObject itemNeed;
     InteractibleManager interactibleManager;
+    [SerializeField] public TMP_Text TextDisplay;
     private void Awake()
     {
         interactibleManager = GetComponent<InteractibleManager>();
@@ -16,7 +19,7 @@ public class Interactible : MonoBehaviour
     {
         if (other.tag == "Player")
             if (itemNeed == other.GetComponent<PlayerInventory>().inventory.GotItem(itemNeed))
-                interactibleManager.Open();
+                interactibleManager.Open(); 
     }
 
     private void OnTriggerExit(Collider other)
