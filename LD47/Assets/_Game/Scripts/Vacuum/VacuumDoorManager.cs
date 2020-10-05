@@ -17,6 +17,7 @@ public class VacuumDoorManager : MonoBehaviour
         timeVacuum = button.timeVacuum;
     }
 
+    //For Door Vacuum (not To Space)
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && !button.VacuumOn() && gameObject.tag != "Vacuum")
