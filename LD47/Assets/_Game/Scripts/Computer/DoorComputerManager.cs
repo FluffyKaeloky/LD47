@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DoorComputerManager : MonoBehaviour
 {
-    public DoorComputer doorNumber;
-    public ComputerManager computer;
+    [SerializeField] DoorComputer doorComputerScriptableObject;
     InteractibleManager interactibleManager;
 
 
@@ -15,8 +14,9 @@ public class DoorComputerManager : MonoBehaviour
         interactibleManager = GetComponent<InteractibleManager>();
     }
 
-    public void OpenComputerDoor()
+    public void OpenComputerDoor(int number)
     {
+        if(doorComputerScriptableObject.doorNumber == number)
             interactibleManager.Open();
     }
 

@@ -9,15 +9,13 @@ public class VacuumArea : MonoBehaviour
     [SerializeField] VacuumButton vacuum;
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject.layer);
         if (other.gameObject.layer == 8 && vacuum.VacuumOn())
-        {
             other.transform.DOMove(toSpace.position, 6.0f).SetEase(Ease.OutExpo);
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Destroy(other);
+        if (other.gameObject.layer == 8 && vacuum.VacuumOn())
+            Destroy(other);
     }
 }

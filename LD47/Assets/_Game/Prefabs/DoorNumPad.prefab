@@ -174,8 +174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6754cebdcc420ef4a9f58e9aec924585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorPad: {fileID: 11400000, guid: 2dff6b016eeda1f42b37b93b3c4ea0a7, type: 2}
-  displayPanel: {fileID: 0}
+  DoorPadScriptableObject: {fileID: 11400000, guid: 2dff6b016eeda1f42b37b93b3c4ea0a7,
+    type: 2}
 --- !u!114 &5296472159688378014
 MonoBehaviour:
   m_ObjectHideFlags: 0
