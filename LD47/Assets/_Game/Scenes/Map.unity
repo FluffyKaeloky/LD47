@@ -11342,7 +11342,7 @@ PrefabInstance:
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
       propertyPath: loopTimer
-      value: 20
+      value: 110
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bcc3c9fee02ed444beb019f712e1fbb, type: 3}
@@ -30757,7 +30757,7 @@ PrefabInstance:
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
       propertyPath: loopTimer
-      value: 10
+      value: 95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bcc3c9fee02ed444beb019f712e1fbb, type: 3}
@@ -77783,6 +77783,11 @@ PrefabInstance:
       propertyPath: startClip
       value: 
       objectReference: {fileID: 8300000, guid: fc5f32b253d911c4c84f3dec188fc000, type: 3}
+    - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
+        type: 3}
+      propertyPath: loopTimer
+      value: 85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bcc3c9fee02ed444beb019f712e1fbb, type: 3}
 --- !u!4 &1554924569 stripped
@@ -94714,7 +94719,7 @@ PrefabInstance:
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
       propertyPath: loopTimer
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
