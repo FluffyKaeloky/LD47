@@ -32,16 +32,18 @@ public class UsableHoverFresnel : MonoBehaviour
 
         if (renderer != null)
         {
-            if (renderer.materials.Length <= materialIndex)
-                return;
+            /*if (renderer.materials.Length <= materialIndex)
+                return;*/
 
-            Material mat = renderer.materials[materialIndex];
+            /*Material mat = renderer.materials[materialIndex];
 
             if (mat == null)
                 return;
 
-            mat.SetFloat(shaderFresnelParameterName, 0.0f);
-            currentFresnel = 0.0f;
+            mat.SetFloat(shaderFresnelParameterName, 0.0f);*/
+            //currentFresnel = 0.0f;
+
+            SetFresnel(0.0f);
         }
     }
 
@@ -72,7 +74,10 @@ public class UsableHoverFresnel : MonoBehaviour
         if (renderer == null)
             return;
 
-        if (renderer.materials.Length <= materialIndex)
+        foreach (Material mat in renderer.materials)
+            mat.SetFloat(shaderFresnelParameterName, value);
+
+        /*if (renderer.materials.Length <= materialIndex)
             return;
 
         Material mat = renderer.materials[materialIndex];
@@ -80,7 +85,7 @@ public class UsableHoverFresnel : MonoBehaviour
         if (mat == null)
             return;
 
-        mat.SetFloat(shaderFresnelParameterName, value);
+        mat.SetFloat(shaderFresnelParameterName, value);*/
         currentFresnel = value;
     }
 }
