@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.Events;
 
 public class LoopManagerScript : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class LoopManagerScript : MonoBehaviour
     Countdown countdown = null;
     Loop loop = null;
 
+    public UnityEvent onTimerChanged = new UnityEvent();
+    public UnityEvent onLoopStart = new UnityEvent();
 
     private void Awake()
     {
@@ -70,6 +73,8 @@ public class LoopManagerScript : MonoBehaviour
             loopList[currentLoop].gameObject.SetActive(true);
             loopList[currentLoop - 1].gameObject.SetActive(false);
             loopTimer = loopList[currentLoop].GetLoopTimer();
+
+            onLoopStart?.Invoke();
         }
     }
 
@@ -90,7 +95,9 @@ public class LoopManagerScript : MonoBehaviour
 
     public void Timer()
     {
-            loopTimer = countdown.TimeDown(loopTimer);
+        loopTimer = countdown.TimeDown(loopTimer);
+
+        onTimerChanged?.Invoke();
     }
 
     //IEnumerator WaitAndRespawn()

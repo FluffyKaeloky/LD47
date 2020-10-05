@@ -44690,7 +44690,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1219131761}
-  m_RootOrder: 51
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &926948009
 TextMesh:
@@ -59286,6 +59286,7 @@ Transform:
   - {fileID: 1770703370}
   - {fileID: 191879889}
   - {fileID: 1284598445}
+  - {fileID: 926948008}
   - {fileID: 395444519}
   - {fileID: 339774795}
   - {fileID: 307058101}
@@ -59327,7 +59328,6 @@ Transform:
   - {fileID: 2050504600}
   - {fileID: 1164772607}
   - {fileID: 956303291}
-  - {fileID: 926948008}
   - {fileID: 239503698}
   - {fileID: 123902613}
   - {fileID: 463293857}
@@ -91528,7 +91528,7 @@ PrefabInstance:
     - target: {fileID: 7625565933595419961, guid: 2bcc3c9fee02ed444beb019f712e1fbb,
         type: 3}
       propertyPath: loopTimer
-      value: 120
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bcc3c9fee02ed444beb019f712e1fbb, type: 3}
@@ -103386,6 +103386,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
         type: 3}
+      propertyPath: onTimerChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
+      propertyPath: onLoopStart.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 157496346}
@@ -103409,6 +103419,36 @@ PrefabInstance:
       propertyPath: loopList.Array.data[3]
       value: 
       objectReference: {fileID: 452824438}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
+      propertyPath: onTimerChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
+      propertyPath: onTimerChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
+      propertyPath: onLoopStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
+      propertyPath: onLoopStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
+      propertyPath: onTimerChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2127079380}
+    - target: {fileID: 4162757303574118177, guid: 3d01a2ae676ac344fbb472ada7746448,
+        type: 3}
+      propertyPath: onLoopStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2127079380}
     - target: {fileID: 4162757303574118181, guid: 3d01a2ae676ac344fbb472ada7746448,
         type: 3}
       propertyPath: m_Name
@@ -103476,6 +103516,26 @@ PrefabInstance:
       objectReference: {fileID: 397226580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d01a2ae676ac344fbb472ada7746448, type: 3}
+--- !u!1 &2127079379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4162757303574118181, guid: 3d01a2ae676ac344fbb472ada7746448,
+    type: 3}
+  m_PrefabInstance: {fileID: 2127079378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2127079380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127079379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3a72842970ac44ba4bc7f038d0cdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endLoopSFX: {fileID: 11400000, guid: 1c57df7c1ff67c7409a1c6ef16835b78, type: 2}
+  startLoopSFX: {fileID: 11400000, guid: a63bc1f21487ffd408e5d99de12d93f5, type: 2}
 --- !u!1001 &2129518940
 PrefabInstance:
   m_ObjectHideFlags: 0
