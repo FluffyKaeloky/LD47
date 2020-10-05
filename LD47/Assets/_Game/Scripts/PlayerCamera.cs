@@ -34,10 +34,7 @@ public class PlayerCamera : MonoBehaviour
     {
         horizontal = playerInput.GetMouseHorizontal();
         vertical = playerInput.GetMouseVertical();
-    }
 
-    private void FixedUpdate()
-    {
         horizontalPivot.Rotate(Vector3.up, horizontal * sensitivity);
 
         angle = Mathf.Clamp(angle - vertical * sensitivity, minVerticalAngle, maxVerticalAngle);

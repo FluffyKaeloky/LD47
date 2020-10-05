@@ -26,4 +26,5 @@ public class InteractibleManager : MonoBehaviour
         sfx.Play();
         //transform.parent.position = closeTransform.position;
     }
+
 }

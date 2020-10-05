@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class DoorPadManager : MonoBehaviour
 {
-    public DoorPad doorPad;
+    [SerializeField] DoorPad DoorPadScriptableObject;
     InteractibleManager interactibleManager;
-    public DisplayPanel displayPanel;
+    //public DisplayPanel displayPanel;
 
     private void Awake()
     {
         interactibleManager = GetComponent<InteractibleManager>();
     }
 
-    public void OpenDoorPad()
+    public void OpenDoorPad(string code)
     {
-        interactibleManager.Open();
+        if(code == DoorPadScriptableObject.CodeNumber)
+            interactibleManager.Open();
     }
     //private void OnTriggerEnter(Collider other)
     //{
