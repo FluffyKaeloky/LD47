@@ -103,7 +103,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &5653944445956559418
 BoxCollider:
@@ -130,9 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc0f1c38a344dd449e10c7a8dbc10cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorNumber: {fileID: 11400000, guid: e11e2c1eab97f3541a91d80351262a2f, type: 2}
-  computer: {fileID: 6711586454321459861, guid: b0cec4cc026314740bbe183f194bc403,
-    type: 3}
+  doorComputerScriptableObject: {fileID: 11400000, guid: e11e2c1eab97f3541a91d80351262a2f,
+    type: 2}
 --- !u!114 &1703603099802346997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05963db235dd6d4595da2f0b9b439ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openTransform: {fileID: 5653944446409839804}
-  closeTransform: {fileID: 5653944446087026510}
+  UpDown: 0
+  DownUp: 0
+  LeftRight: 0
+  RightLeft: 0
 --- !u!114 &1118400373
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,8 +7,6 @@ public class DoorComputerManager : MonoBehaviour
     [SerializeField] DoorComputer doorComputerScriptableObject;
     InteractibleManager interactibleManager;
 
-
-
     private void Awake()
     {
         interactibleManager = GetComponent<InteractibleManager>();
