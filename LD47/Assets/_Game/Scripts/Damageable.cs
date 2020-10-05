@@ -62,6 +62,9 @@ public class Damageable : MonoBehaviour
 
             if (health <= 0.0f && previous > 0.0f)
                 onDeath?.Invoke();
+
+            if (health > 0.0f && previous <= 0.0f)
+                onRevive?.Invoke();
         }
     }
     [SerializeField]
@@ -82,6 +85,7 @@ public class Damageable : MonoBehaviour
     public HealthChangedEvent onHealthChanged = new HealthChangedEvent();
     public DamageTakenEvent onDamageTaken = new DamageTakenEvent();
     public UnityEvent onDeath = new UnityEvent();
+    public UnityEvent onRevive = new UnityEvent();
 
     public bool invincible = false;
 
