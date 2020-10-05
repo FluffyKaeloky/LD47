@@ -13,6 +13,8 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.Events;
 using AlmenaraGames;
+using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class LoopManagerScript : MonoBehaviour
 {
@@ -29,6 +31,9 @@ public class LoopManagerScript : MonoBehaviour
     Countdown countdown = null;
     Loop loop = null;
 
+    public List<Material> listMaterial = new List<Material>();
+
+    [SerializeField] AudioObject deathSFX;
     private float timeMultiplier = 1.0f;
 
     public UnityEvent onTimerChanged = new UnityEvent();
@@ -82,7 +87,7 @@ public class LoopManagerScript : MonoBehaviour
     private void Update()
     {
         StartNextLoop();
-        Timer();
+
     }
 
 
@@ -94,14 +99,22 @@ public class LoopManagerScript : MonoBehaviour
             currentLoop = 0;
     }
 
-    public void LoopChange()
+    public async Task<bool> LoopChange()
     {
         if (currentLoop >= loopList.Count)
         {
             Debug.Log("GameOver");
-            loopList[currentLoop].gameObject.SetActive(false);
-            loopList[0].gameObject.SetActive(true);
-            currentLoop = 0;
+            //loopList[currentLoop].gameObject.SetActive(false);
+            //loopList[0].gameObject.SetActive(true);
+            //currentLoop = 0;
+            MultiAudioManager.PlayAudioObject(deathSFX, transform.position);
+            await new WaitForSeconds(deathSFX.clips[0].length + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            listMaterial.ForEach((x) => {
+                x.SetFloat("_Fade", 0.0f);
+            });
+            return true;
+            
         }
         else if(currentLoop > 0)
         {
@@ -116,23 +129,28 @@ public class LoopManagerScript : MonoBehaviour
 
         Damageable damageable = player.GetComponent<Damageable>();
         damageable.Health = damageable.MaxHealth;
+        return false;
     }
 
-    public void StartNextLoop()
+    public async void StartNextLoop()
     {
         if (loopTimer <= 0)
         {
             player.SetActive(false);
             respawn.RespawnPlayer();
             GetNextLoop();
-            LoopChange();
+            bool r = await LoopChange();
+            if(r == true)
+                return;         
             loopTimer = loopList[currentLoop].GetLoopTimer();
             Debug.Log(loopTimer);
             countdown.SetTimer(loopTimer);
             player.SetActive(true);
             //StartCoroutine(WaitAndRespawn());
         }
-}
+
+        Timer();
+    }
 
     public void Timer()
     {
