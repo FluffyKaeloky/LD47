@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorName: 
   description: Door needing a password to unlock
-  CodeNumber: 12345
+  CodeNumber: 31415
