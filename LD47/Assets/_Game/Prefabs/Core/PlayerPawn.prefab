@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 406936795}
   - component: {fileID: 406936796}
   - component: {fileID: 8236425753183064347}
+  - component: {fileID: 63624230}
   m_Layer: 9
   m_Name: PlayerPawn
   m_TagString: Untagged
@@ -575,6 +576,22 @@ MonoBehaviour:
   playOnStart: 0
   duration: 0.5
   amplitude: 1
+--- !u!114 &63624230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8455195313790759878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8919e29a528af84d9d61ad965b1c79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxVelocity: 0.1
+  strength: 0.03
+  frequency: 0.4
+  target: {fileID: 8455195313884904397}
 --- !u!1 &8455195313884904398
 GameObject:
   m_ObjectHideFlags: 0
