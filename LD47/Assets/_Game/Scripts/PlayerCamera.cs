@@ -41,4 +41,9 @@ public class PlayerCamera : MonoBehaviour
 
         verticalPivot.localRotation = Quaternion.AngleAxis(angle, Vector3.right);
     }
+
+    public void ResetCamera()
+    {
+        angle = 0;
+    }
 }

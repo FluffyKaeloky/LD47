@@ -15,10 +15,10 @@ using Sirenix.OdinInspector;
 public class LoopManagerScript : MonoBehaviour
 {
     public static LoopManagerScript instance = null;
-    public List<GameObject> loopList = new List<GameObject>();
+    public List<Loop> loopList = new List<Loop>();
     public int currentLoop = 0;
 
-    private float loopTimer = 0.0f;
+    public float loopTimer = 0.0f;
 
     [SerializeField] GameObject player;
     Respawn respawn = null;
@@ -49,6 +49,7 @@ public class LoopManagerScript : MonoBehaviour
     public void GetNextLoop()
     {
         if (currentLoop < loopList.Count)
+            
             currentLoop++;
         else
             currentLoop = 0;
@@ -59,14 +60,16 @@ public class LoopManagerScript : MonoBehaviour
         if (currentLoop == loopList.Count - 1)
         {
             Debug.Log("GameOver");
-            loopList[currentLoop].SetActive(false);
-            loopList[0].SetActive(true);
+            loopList[currentLoop].gameObject.SetActive(false);
+            loopList[0].gameObject.SetActive(true);
+            loopTimer = loop.GetLoopTimer();
             currentLoop = 0;
         }
         else if(currentLoop > 0)
         {
-            loopList[currentLoop].SetActive(true);
-            loopList[currentLoop - 1].SetActive(false);
+            loopList[currentLoop].gameObject.SetActive(true);
+            loopList[currentLoop - 1].gameObject.SetActive(false);
+            loopTimer = loopList[currentLoop].GetLoopTimer();
         }
     }
 
@@ -75,10 +78,10 @@ public class LoopManagerScript : MonoBehaviour
         if (loopTimer <= 0)
         {
             player.SetActive(false);
-            loopTimer = loop.GetLoopTimer();
             respawn.RespawnPlayer();
             GetNextLoop();
             LoopChange();
+            Debug.Log(loopTimer);
             countdown.SetTimer(loopTimer);
             player.SetActive(true);
             //StartCoroutine(WaitAndRespawn());
