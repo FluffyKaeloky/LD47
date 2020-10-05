@@ -24,6 +24,8 @@ public class TurretWeapon : MonoBehaviour
     public VisualEffect fireMuzzleVFX = null;
     public string fireMuzzleVFXEventName = "Fire";
 
+    public VisualEffect bulletHoleVFXPrefab = null;
+
     private Coroutine fireCoroutine = null;
 
     private bool isFiring = false;
@@ -86,10 +88,13 @@ public class TurretWeapon : MonoBehaviour
             RaycastHit hit;
 
             Vector3 target = Vector3.zero;
+            Vector3 hitNormal = Vector3.up;
 
             if (Physics.Raycast(ray, out hit, maxDistance, int.MaxValue, QueryTriggerInteraction.Ignore))
             {
                 target = hit.point;
+                hitNormal = hit.normal;
+
                 Rigidbody targetRb = hit.collider.attachedRigidbody;
                 if (targetRb != null)
                     targetRb.AddForceAtPosition(ray.direction * pushback, hit.point, ForceMode.Impulse);
@@ -99,11 +104,15 @@ public class TurretWeapon : MonoBehaviour
                     damageable.TakeDamage(damages, transform, Damageable.DamageType.Bullet);
             }
             else
+            {
                 target = fireMuzzle.position + fireMuzzle.forward * maxDistance;
+                hitNormal = Vector3.zero;
+            }
 
             Debug.DrawLine(ray.origin, target, Color.yellow, 0.1f);
 
-            //TODO : Use target for VFX ?
+            if (hitNormal != Vector3.zero && bulletHoleVFXPrefab != null)
+                Destroy(Instantiate(bulletHoleVFXPrefab, target + hitNormal * 0.05f, Quaternion.LookRotation(Vector3.forward, hitNormal)), 8.0f);
 
             onBulletFired?.Invoke();
 

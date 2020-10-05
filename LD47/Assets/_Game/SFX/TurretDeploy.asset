@@ -10,19 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50a63b358e82d544c8f9d76f1200875d, type: 3}
-  m_Name: Bullet_impact_body
+  m_Name: TurretDeploy
   m_EditorClassIdentifier: 
   identifier: 
   clips:
-  - {fileID: 8300000, guid: 71de0983701a7ea4da895a5832c1f9d9, type: 3}
-  - {fileID: 8300000, guid: ab2cf140114a08e4bbfffb363e03ea1b, type: 3}
-  - {fileID: 8300000, guid: f8ac5ddf9b7aabf46a07f8f5a593b637, type: 3}
-  - {fileID: 8300000, guid: 05ba4324da45e8c408a8acb4c49b82d3, type: 3}
-  - {fileID: 8300000, guid: 7121ce6abf9b1e94a81e64025dce7430, type: 3}
-  - {fileID: 8300000, guid: 874c735515e721444aca622a764d4992, type: 3}
-  - {fileID: 8300000, guid: 2bc21827ac355644e8a9cf5716767725, type: 3}
-  - {fileID: 8300000, guid: ec3bce614edccd146b6744d1fec331dc, type: 3}
-  volume: 0.5
+  - {fileID: 8300000, guid: 54fa8d87d734e9f43b37edc461342384, type: 3}
+  volume: 0.9
   spread: 0
   pitch: 1
   spatialMode2D: 0
@@ -33,10 +26,10 @@ MonoBehaviour:
   maxSources: 0
   minDistance: 1
   maxDistance: 20
-  minPitchMultiplier: 0.9
-  maxPitchMultiplier: 1.1
-  minVolumeMultiplier: 0.8
-  maxVolumeMultiplier: 1.2
+  minPitchMultiplier: 1
+  maxPitchMultiplier: 1
+  minVolumeMultiplier: 1
+  maxVolumeMultiplier: 1
   reverbZoneMix: 1
   dopplerLevel: 0.25
   volumeRolloff: 1
@@ -66,5 +59,5 @@ MonoBehaviour:
     m_RotationOrder: 4
   mixerGroup: {fileID: 243052860578643906, guid: 4b3f3a305952a574191f055c8efa0967,
     type: 2}
-  spatialize: 0
+  spatialize: 1
   isBGM: 0
