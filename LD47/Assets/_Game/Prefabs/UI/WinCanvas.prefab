@@ -460,7 +460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SPACESHIP GAME
+  m_text: PHASE DECAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7847e9e1338d01542a544763c1e024ab, type: 2}
   m_sharedMaterial: {fileID: -1503904977239513379, guid: 7847e9e1338d01542a544763c1e024ab,
