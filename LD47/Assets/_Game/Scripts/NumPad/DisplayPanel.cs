@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class DisplayPanel : MonoBehaviour
 {
-    [SerializeField] DoorPad CorrespondingDoor;
-    [SerializeField]TMP_Text display;
-    [SerializeField] DoorPadManager door;
+    [SerializeField] DoorPad DoorPadScriptableObject;
+    [SerializeField]TMP_Text displayText;
+    [SerializeField] DoorPadManager doorPadManager;
     int count = 0;
 
     public void DisplayNumber(int num)
@@ -16,16 +16,16 @@ public class DisplayPanel : MonoBehaviour
         
         if(count < 5)
         {
-            display.text += num;
+            displayText.text += num;
             count++;
         }
         
         if (count == 5)
         {
-            if(display.text == "12345")
+            if(displayText.text == DoorPadScriptableObject.CodeNumber)
             {
-                display.text = "Unlock";
-                door.OpenDoorPad();
+                displayText.text = "Unlock";
+                doorPadManager.OpenDoorPad(DoorPadScriptableObject.CodeNumber);
                 count++;
             }
             else
@@ -41,9 +41,9 @@ public class DisplayPanel : MonoBehaviour
     //}
     IEnumerator RetryInput()
     {
-        display.text = "Retry";
+        displayText.text = "Retry";
         count = 0;
         yield return new WaitForSeconds(0.5f);
-        display.text = "";
+        displayText.text = "";
     }
 }

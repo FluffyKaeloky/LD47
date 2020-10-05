@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ComputerButtonManager : MonoBehaviour
 {
-    [SerializeField] ComputerButton button;
+    [SerializeField] ComputerButton buttonScriptableObject;
     [SerializeField] ComputerManager computer;
     public void ButtonPress()
     {
-        computer.GetButtonNumber(button.number);
+        computer.GetButtonNumber(buttonScriptableObject.number);
     }
 }

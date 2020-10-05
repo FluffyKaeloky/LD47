@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ComputerManager : MonoBehaviour
 {
-    [SerializeField] DoorComputer door;
-    [SerializeField]DoorComputerManager doorOpen;
+    [SerializeField] DoorComputer doorComputerScriptableObject;
+    [SerializeField] DoorComputerManager doorComputerManager;
     bool unlock = false;
     public void GetButtonNumber(int number)
     {
-        if (number == door.doorNumber && unlock == false)
+        if (number == doorComputerScriptableObject.doorNumber && unlock == false)
         {
-            doorOpen.OpenComputerDoor();
+            doorComputerManager.OpenComputerDoor(doorComputerScriptableObject.doorNumber);
             unlock = true;
         }
         //else
