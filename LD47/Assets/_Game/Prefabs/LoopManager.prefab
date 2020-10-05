@@ -45,8 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec88cf952b2046748befac6286238b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loopList: []
+  loopList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentLoop: 0
+  loopTimer: 0
   player: {fileID: 0}
 --- !u!114 &4162757303574118176
 MonoBehaviour:

@@ -9,7 +9,6 @@ public class Countdown : MonoBehaviour {
 	public void SetTimer(float loopTimer)
     {
 		textBox.text = loopTimer.ToString();
-		
 	}
 
     public float TimeDown(float loopTimer)
