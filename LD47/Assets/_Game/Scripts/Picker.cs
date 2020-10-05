@@ -16,6 +16,8 @@ public class Picker : MonoBehaviour
 
     public float throwForce = 10.0f;
 
+    public float forceDropForce = 200.0f;
+
     public Pickable CurrentPickable { get; private set; } = null;
     private Vector3 oldPickablePosition = Vector3.zero;
 
@@ -24,6 +26,12 @@ public class Picker : MonoBehaviour
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
+    }
+
+    private void Update()
+    {
+        if (pickableHandlerJoint.currentForce.magnitude > forceDropForce)
+            Drop();
     }
 
     public void Pick(Pickable pickable)
