@@ -8,6 +8,7 @@ public class OopsieFinder3000 : EditorWindow
     [SerializeField] private bool resetScale = true;
     [SerializeField] private Mesh meshToReplace;
     [SerializeField] private GameObject replacementPrefab;
+    [SerializeField] private Vector3 rotationOffset = Vector3.zero;
 
     private int replacementCounter;
     private int skippedPrefabCounter;
@@ -23,6 +24,7 @@ public class OopsieFinder3000 : EditorWindow
         resetScale = EditorGUILayout.Toggle("Reset scale", resetScale);
         meshToReplace = (Mesh)EditorGUILayout.ObjectField("Mesh to replace", meshToReplace, typeof(Mesh), false);
         replacementPrefab = (GameObject)EditorGUILayout.ObjectField("Replacement prefab", replacementPrefab, typeof(GameObject), false);
+        rotationOffset = EditorGUILayout.Vector3Field("Rotation offset", rotationOffset);
 
         if (GUILayout.Button("Replace"))
         {
@@ -67,7 +69,7 @@ public class OopsieFinder3000 : EditorWindow
                     return;
                 }
 
-                //Undo.RegisterCreatedObjectUndo(newObject, "Replace With Prefabs");
+                Undo.RegisterCreatedObjectUndo(newObject, "Replace With Prefabs");
 
                 newObject.transform.SetSiblingIndex(meshFilter.transform.GetSiblingIndex());
 
@@ -77,7 +79,7 @@ public class OopsieFinder3000 : EditorWindow
                 }
 
                 newObject.transform.localPosition = meshFilter.transform.localPosition;
-                newObject.transform.localRotation = meshFilter.transform.localRotation;
+                newObject.transform.localRotation = meshFilter.transform.localRotation * Quaternion.Euler(rotationOffset);
 
                 if (resetScale)
                 {
@@ -88,10 +90,10 @@ public class OopsieFinder3000 : EditorWindow
                     newObject.transform.localScale = meshFilter.transform.localScale;
                 }
 
-                EditorGUIUtility.PingObject(meshFilter.gameObject);
+                //EditorGUIUtility.PingObject(meshFilter.gameObject);
 
-                //Undo.DestroyObjectImmediate(meshFilter.gameObject);
-                DestroyImmediate(meshFilter.gameObject);
+                Undo.DestroyObjectImmediate(meshFilter.gameObject);
+                //DestroyImmediate(meshFilter.gameObject);
 
                 replacementCounter++;
             }
