@@ -3660,6 +3660,7 @@ MonoBehaviour:
       m_Calls: []
   fireMuzzleVFX: {fileID: 0}
   fireMuzzleVFXEventName: Fire
+  bulletHoleVFXPrefab: {fileID: 0}
 --- !u!1 &1255395158
 GameObject:
   m_ObjectHideFlags: 0

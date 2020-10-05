@@ -11,6 +11,7 @@ TagManager:
   - Card
   - Key
   - Piece
+  - Vacuum
   layers:
   - Default
   - TransparentFX
