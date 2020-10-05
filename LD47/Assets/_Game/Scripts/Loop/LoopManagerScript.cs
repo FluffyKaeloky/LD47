@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.Events;
+using AlmenaraGames;
 
 public class LoopManagerScript : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class LoopManagerScript : MonoBehaviour
     public int currentLoop = 0;
 
     public float loopTimer = 0.0f;
+
+    public MultiAudioSource annoucerSource = null;
 
     [SerializeField] GameObject player;
     Respawn respawn = null;
@@ -42,6 +45,12 @@ public class LoopManagerScript : MonoBehaviour
         loopTimer = loop.GetLoopTimer();
     }
 
+    private void Start()
+    {
+        if (loopList[0].startClip != null)
+            annoucerSource.PlayOverride(loopList[0].startClip);
+    }
+
     private void Update()
     {
         StartNextLoop();
@@ -52,7 +61,6 @@ public class LoopManagerScript : MonoBehaviour
     public void GetNextLoop()
     {
         if (currentLoop < loopList.Count)
-            
             currentLoop++;
         else
             currentLoop = 0;
@@ -73,6 +81,9 @@ public class LoopManagerScript : MonoBehaviour
             loopList[currentLoop].gameObject.SetActive(true);
             loopList[currentLoop - 1].gameObject.SetActive(false);
             loopTimer = loopList[currentLoop].GetLoopTimer();
+
+            if (loopList[currentLoop].startClip != null)
+                annoucerSource.PlayOverride(loopList[currentLoop].startClip);
 
             onLoopStart?.Invoke();
         }
