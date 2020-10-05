@@ -29,6 +29,8 @@ public class LoopManagerScript : MonoBehaviour
     Countdown countdown = null;
     Loop loop = null;
 
+    private float timeMultiplier = 1.0f;
+
     public UnityEvent onTimerChanged = new UnityEvent();
     public UnityEvent onLoopStart = new UnityEvent();
 
@@ -56,7 +58,25 @@ public class LoopManagerScript : MonoBehaviour
         }
         currentLoop = 0;
         loopList[currentLoop].gameObject.SetActive(true);
-                
+
+        player.GetComponent<Damageable>().onDeath.AddListener(async () => 
+        {
+            timeMultiplier = 0.0f;
+
+            await new WaitForSeconds(5.0f);
+
+            player.SetActive(false);
+            respawn.RespawnPlayer();
+
+            GetNextLoop();
+            LoopChange();
+
+            loopTimer = loopList[currentLoop].GetLoopTimer();
+
+            timeMultiplier = 1.0f;
+
+            player.SetActive(true);
+        });
     }
 
     private void Update()
@@ -93,6 +113,9 @@ public class LoopManagerScript : MonoBehaviour
 
             onLoopStart?.Invoke();
         }
+
+        Damageable damageable = player.GetComponent<Damageable>();
+        damageable.Health = damageable.MaxHealth;
     }
 
     public void StartNextLoop()
@@ -113,7 +136,7 @@ public class LoopManagerScript : MonoBehaviour
 
     public void Timer()
     {
-        loopTimer = countdown.TimeDown(loopTimer);
+        loopTimer = countdown.TimeDown(loopTimer, timeMultiplier);
 
         onTimerChanged?.Invoke();
     }

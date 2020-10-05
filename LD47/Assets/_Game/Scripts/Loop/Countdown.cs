@@ -11,9 +11,9 @@ public class Countdown : MonoBehaviour {
 		textBox.text = loopTimer.ToString();
 	}
 
-    public float TimeDown(float loopTimer)
+    public float TimeDown(float loopTimer, float timeMultiplier)
     {
-		loopTimer -= Time.deltaTime;
+		loopTimer -= Time.deltaTime * timeMultiplier;
 		textBox.text = Mathf.Round(loopTimer).ToString();
 		return loopTimer;
 	}
