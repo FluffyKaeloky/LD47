@@ -11,5 +11,7 @@ public class Respawn : MonoBehaviour
     public void RespawnPlayer()
     {
         playerPawn.transform.position = spawnPoint.position;
+        playerPawn.transform.rotation = spawnPoint.rotation;
+        playerPawn.GetComponent<PlayerCamera>().ResetCamera();
     }
 }
