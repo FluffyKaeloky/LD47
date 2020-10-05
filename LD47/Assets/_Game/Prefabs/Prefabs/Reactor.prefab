@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 7943987599668665824}
   - component: {fileID: 5364247393605232970}
   - component: {fileID: 8320036730684270329}
+  - component: {fileID: 249414807}
   m_Layer: 0
   m_Name: Reactor
   m_TagString: Untagged
@@ -229,6 +230,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &249414807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3188872037739788154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9f73bcca8d99f478473eee6138be5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 0}
+  textGroup: {fileID: 0}
+  victoryAnnoucement: {fileID: 11400000, guid: 01dbd726221dc50409ee47d841a601c4, type: 2}
+  delay: 6
 --- !u!1 &5402657154405969156
 GameObject:
   m_ObjectHideFlags: 0

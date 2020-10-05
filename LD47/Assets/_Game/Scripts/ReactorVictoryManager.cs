@@ -30,7 +30,6 @@ public class ReactorVictoryManager : MonoBehaviour
         if (!enabled)
             return;
 
-
         InventorySystem ivs = args.Instigator.GetComponentInChildren<InventorySystem>();
 
         if (ivs == null)
@@ -45,6 +44,8 @@ public class ReactorVictoryManager : MonoBehaviour
             {
                 onVictory?.Invoke();
                 enabled = false;
+
+                args.Instigator.GetComponent<PlayerInput>().enabled = false;
             }
         }
     }
