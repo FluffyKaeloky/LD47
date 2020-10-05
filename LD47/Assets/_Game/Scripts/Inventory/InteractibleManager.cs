@@ -7,7 +7,6 @@ public class InteractibleManager : MonoBehaviour
 {
     [SerializeField] Transform openTransform;
     [SerializeField] Transform closeTransform;
-    Interactible interactible = null;
     PooledSFXPlayer sfx;
 
     private void Awake()

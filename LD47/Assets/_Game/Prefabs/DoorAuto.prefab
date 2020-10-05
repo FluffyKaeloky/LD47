@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 9164804804683210641}
   - component: {fileID: 9164804804683210668}
   - component: {fileID: 173834895}
+  - component: {fileID: 1565687168}
   m_Layer: 0
   m_Name: DoorAuto
   m_TagString: DoorVertical
@@ -159,8 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368906cdc4536fd4da5e70593da36f20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openTransform: {fileID: 9164804804364081431}
-  closeTransform: {fileID: 9164804805089581797}
 --- !u!114 &173834895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +173,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioObject: {fileID: 11400000, guid: a0f758f2f92dabd48b4af7606df036dc, type: 2}
+--- !u!114 &1565687168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9164804804683210646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05963db235dd6d4595da2f0b9b439ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openTransform: {fileID: 9164804804364081431}
+  closeTransform: {fileID: 9164804805089581797}
 --- !u!1 &9164804805089581802
 GameObject:
   m_ObjectHideFlags: 0
