@@ -108651,7 +108651,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2127079379}
     - target: {fileID: 4162757303574118176, guid: 3d01a2ae676ac344fbb472ada7746448,
         type: 3}
       propertyPath: playerPawn
@@ -108764,6 +108764,12 @@ PrefabInstance:
       objectReference: {fileID: 397226580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d01a2ae676ac344fbb472ada7746448, type: 3}
+--- !u!4 &2127079379 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 109009365336749421, guid: 3d01a2ae676ac344fbb472ada7746448,
+    type: 3}
+  m_PrefabInstance: {fileID: 2127079378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2129518940
 PrefabInstance:
   m_ObjectHideFlags: 0
