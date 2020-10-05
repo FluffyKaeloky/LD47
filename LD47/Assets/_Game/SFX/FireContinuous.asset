@@ -10,24 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50a63b358e82d544c8f9d76f1200875d, type: 3}
-  m_Name: BulletImpactCue
+  m_Name: FireContinuous
   m_EditorClassIdentifier: 
   identifier: 
   clips:
-  - {fileID: 8300000, guid: 553d68c6d6f654c41b9c8c8367422e17, type: 3}
-  - {fileID: 8300000, guid: 54accae3238a36b42a052ab4827f9c96, type: 3}
-  - {fileID: 8300000, guid: de281367d9a84cf40be515aef67dc4d5, type: 3}
-  - {fileID: 8300000, guid: d79c2bf761e2f9243a34a5525466fcbc, type: 3}
-  - {fileID: 8300000, guid: 162382a33db26af43ae2ccfd5cb11129, type: 3}
-  - {fileID: 8300000, guid: 0775872c7dce57a4291a236969a11c36, type: 3}
-  - {fileID: 8300000, guid: 2486f3e70295371458f401b7f6de2311, type: 3}
-  - {fileID: 8300000, guid: 9d7ec4009e4853d4d928103e4d5afa2e, type: 3}
-  volume: 0.6
+  - {fileID: 8300000, guid: ae0deec4e48b92e4ca03e736be7a3b09, type: 3}
+  volume: 0.7
   spread: 0
   pitch: 1
   spatialMode2D: 0
   stereoPan: 0
-  loop: 0
+  loop: 1
   playClipsSequentially: 0
   priority: 128
   maxSources: 0
