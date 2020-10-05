@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4162757303574118177}
   - component: {fileID: 4162757303574118176}
   - component: {fileID: 4162757303574118183}
+  - component: {fileID: 143484454481733521}
   m_Layer: 0
   m_Name: LoopManager
   m_TagString: Untagged
@@ -53,6 +54,12 @@ MonoBehaviour:
   currentLoop: 0
   loopTimer: 0
   player: {fileID: 0}
+  onTimerChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoopStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4162757303574118176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,3 +87,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 0}
+--- !u!114 &143484454481733521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162757303574118181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3a72842970ac44ba4bc7f038d0cdef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endLoopSFX: {fileID: 11400000, guid: 1c57df7c1ff67c7409a1c6ef16835b78, type: 2}
+  startLoopSFX: {fileID: 11400000, guid: a63bc1f21487ffd408e5d99de12d93f5, type: 2}
