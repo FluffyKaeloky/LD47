@@ -18,7 +18,7 @@ public class InstantiateObject : MonoBehaviour
             Instantiate();
     }
 
-    private void Instantiate()
+    public void Instantiate()
     {
         GameObject instance = Instantiate(prefab, transform.position, prefab.transform.rotation);
         if (destroyTimer > 0.0f)
