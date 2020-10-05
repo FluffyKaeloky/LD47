@@ -5,8 +5,10 @@ using UnityEngine;
 public class DoorComputerManager : MonoBehaviour
 {
     public DoorComputer doorNumber;
-    InteractibleManager interactibleManager;
     public ComputerManager computer;
+    InteractibleManager interactibleManager;
+
+
 
     private void Awake()
     {

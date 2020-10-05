@@ -9,9 +9,11 @@ public class ComputerManager : MonoBehaviour
     bool unlock = false;
     public void GetButtonNumber(int number)
     {
-        if (number == door.doorNumber)
+        if (number == door.doorNumber && unlock == false)
+        {
             doorOpen.OpenComputerDoor();
-        //unlock = true
+            unlock = true;
+        }
         //else
         //    unlock = false;
     }

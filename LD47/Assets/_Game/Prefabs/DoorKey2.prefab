@@ -89,8 +89,9 @@ GameObject:
   - component: {fileID: 1453184222718847094}
   - component: {fileID: 7711660304374200298}
   - component: {fileID: 5618256079246483385}
+  - component: {fileID: 106816889}
   m_Layer: 0
-  m_Name: DoorKey1 (1)
+  m_Name: DoorKey2
   m_TagString: DoorVertical
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +206,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactible: {fileID: 11400000, guid: 10b70d8f6ef670641bf0c3be1bbce341, type: 2}
   itemNeed: {fileID: 11400000, guid: b307fd573b70a3c4e8bd988560d9a4ab, type: 2}
-  interactibleManager: {fileID: 5618256079246483385}
 --- !u!114 &5618256079246483385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +220,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openTransform: {fileID: 1453184221997592304}
   closeTransform: {fileID: 1453184222874053890}
+--- !u!114 &106816889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453184222718847089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74deb1d62800f274c870dd9df309be0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioObject: {fileID: 11400000, guid: a0f758f2f92dabd48b4af7606df036dc, type: 2}
 --- !u!1 &1453184222874053901
 GameObject:
   m_ObjectHideFlags: 0

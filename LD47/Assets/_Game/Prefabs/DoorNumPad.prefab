@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 1176116959747076433}
   - component: {fileID: 5225719429259867127}
   - component: {fileID: 5296472159688378014}
+  - component: {fileID: 2110899457}
   m_Layer: 0
   m_Name: DoorNumPad
   m_TagString: DoorVertical
@@ -73,7 +74,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176116959747076438}
-  m_LocalRotation: {x: -0, y: -0.7175902, z: -0, w: 0.6964656}
+  m_LocalRotation: {x: 0, y: -0.7175916, z: 0, w: 0.6964642}
   m_LocalPosition: {x: -18.1, y: 4.73, z: -2.2}
   m_LocalScale: {x: 10, y: 10, z: 0.5}
   m_Children:
@@ -189,6 +190,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openTransform: {fileID: 1176116960502282199}
   closeTransform: {fileID: 1176116960179434533}
+--- !u!114 &2110899457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176116959747076438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74deb1d62800f274c870dd9df309be0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioObject: {fileID: 11400000, guid: bccfa8a169d0b2c4a88a3142c95ecd25, type: 2}
 --- !u!1 &1176116960179434538
 GameObject:
   m_ObjectHideFlags: 0
