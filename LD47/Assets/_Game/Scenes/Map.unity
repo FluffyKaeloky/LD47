@@ -542,6 +542,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8692688173708442914, guid: b6702d0b74f2c9e45a3c4b2f81abd505,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -31.111023
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6702d0b74f2c9e45a3c4b2f81abd505, type: 3}
 --- !u!224 &4862997 stripped
@@ -59989,6 +59994,16 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 2129518941}
+    - target: {fileID: 8455195313884904396, guid: d19bc0e8d87daff4ea81f5fc63399862,
+        type: 3}
+      propertyPath: m_Lens.NearClipPlane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455195313884904396, guid: d19bc0e8d87daff4ea81f5fc63399862,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8455195314263603388, guid: d19bc0e8d87daff4ea81f5fc63399862,
         type: 3}
       propertyPath: m_BreakForce
@@ -108796,6 +108811,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1556113028249027280, guid: e81833c1ac6a54346a4b331fbcddc209,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556113028249027280, guid: e81833c1ac6a54346a4b331fbcddc209,
+        type: 3}
+      propertyPath: far clip plane
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1556113028249027281, guid: e81833c1ac6a54346a4b331fbcddc209,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -15,7 +15,7 @@ MonoBehaviour:
   identifier: 
   clips:
   - {fileID: 8300000, guid: cfac6e9ac4950df439530667cdbb784b, type: 3}
-  volume: 0.7
+  volume: 0.6
   spread: 0
   pitch: 1
   spatialMode2D: 0

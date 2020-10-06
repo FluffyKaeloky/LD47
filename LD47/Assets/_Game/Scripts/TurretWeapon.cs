@@ -112,7 +112,7 @@ public class TurretWeapon : MonoBehaviour
             Debug.DrawLine(ray.origin, target, Color.yellow, 0.1f);
 
             if (hitNormal != Vector3.zero && bulletHoleVFXPrefab != null)
-                Destroy(Instantiate(bulletHoleVFXPrefab, target + hitNormal * 0.05f, Quaternion.LookRotation(Vector3.forward, hitNormal)), 8.0f);
+                Destroy(Instantiate(bulletHoleVFXPrefab, target + hitNormal * 0.05f, Quaternion.LookRotation(Vector3.forward, hitNormal)).gameObject, 8.0f);
 
             onBulletFired?.Invoke();
 

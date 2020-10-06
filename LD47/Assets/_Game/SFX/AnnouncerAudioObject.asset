@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: 
   clips: []
-  volume: 0.7
+  volume: 0.6
   spread: 0
   pitch: 1
   spatialMode2D: 0
