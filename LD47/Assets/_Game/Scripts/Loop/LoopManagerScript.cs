@@ -34,7 +34,7 @@ public class LoopManagerScript : MonoBehaviour
     public List<Material> listMaterial = new List<Material>();
 
     [SerializeField] AudioObject deathSFX;
-    private float timeMultiplier = 1.0f;
+    public float timeMultiplier = 1.0f;
 
     public UnityEvent onTimerChanged = new UnityEvent();
     public UnityEvent onLoopStart = new UnityEvent();

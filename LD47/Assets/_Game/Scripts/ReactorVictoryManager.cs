@@ -46,6 +46,7 @@ public class ReactorVictoryManager : MonoBehaviour
                 enabled = false;
 
                 args.Instigator.GetComponent<PlayerInput>().enabled = false;
+                LoopManagerScript.instance.timeMultiplier = 0.0f;
             }
         }
     }
