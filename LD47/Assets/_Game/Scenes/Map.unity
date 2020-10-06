@@ -60162,32 +60162,13 @@ PrefabInstance:
         type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8455195313790759935, guid: d19bc0e8d87daff4ea81f5fc63399862,
+        type: 3}
     - target: {fileID: 8455195313790759935, guid: d19bc0e8d87daff4ea81f5fc63399862,
         type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 2129518941}
-    - target: {fileID: 8455195313790759935, guid: d19bc0e8d87daff4ea81f5fc63399862,
-        type: 3}
-      propertyPath: joystickLookInputMultiplier
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8455195313884904396, guid: d19bc0e8d87daff4ea81f5fc63399862,
-        type: 3}
-      propertyPath: m_Lens.NearClipPlane
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 8455195313884904396, guid: d19bc0e8d87daff4ea81f5fc63399862,
-        type: 3}
-      propertyPath: m_Lens.FarClipPlane
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8455195314263603388, guid: d19bc0e8d87daff4ea81f5fc63399862,
-        type: 3}
-      propertyPath: m_BreakForce
-      value: Infinity
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d19bc0e8d87daff4ea81f5fc63399862, type: 3}
 --- !u!1001 &1180845202
@@ -110354,6 +110335,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc0f1c38a344dd449e10c7a8dbc10cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &5871044030991046861
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 549061428995358480, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_Name
+      value: BoomboxPickable
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.545
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 29.842
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.2686511
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6622481
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.26293805
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.64816487
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -91.231
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358483, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -44.161
+      objectReference: {fileID: 0}
+    - target: {fileID: 549061428995358485, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 549061428995358485, guid: 8150de4bb7d328d4b86d391ebc123f08,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8150de4bb7d328d4b86d391ebc123f08, type: 3}
 --- !u!4 &6982135672324298705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3191562975949061993, guid: 0c36388844cd5e34a8afd5e99562d40a,

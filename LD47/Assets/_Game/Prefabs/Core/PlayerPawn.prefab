@@ -172,7 +172,7 @@ MonoBehaviour:
   onThrowDown:
     m_PersistentCalls:
       m_Calls: []
-  joystickLookInputMultiplier: 3
+  joystickLookInputMultiplier: 1.5
 --- !u!114 &8455195313790759875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
       m_Calls: []
   pickableHandlerJoint: {fileID: 8455195314263603388}
   throwForce: 10
-  forceDropForce: 1200
+  forceDropForce: 1500
 --- !u!114 &8455195313790759933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,8 +693,8 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 70
     OrthographicSize: 5
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
+    NearClipPlane: 0.01
+    FarClipPlane: 100
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
