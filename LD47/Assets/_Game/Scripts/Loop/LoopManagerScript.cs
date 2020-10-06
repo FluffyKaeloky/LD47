@@ -39,12 +39,13 @@ public class LoopManagerScript : MonoBehaviour
     public UnityEvent onTimerChanged = new UnityEvent();
     public UnityEvent onLoopStart = new UnityEvent();
 
+    public UnityEvent onGameOver = new UnityEvent();
+
+    private bool playAnnouncement = true;
+
     private void Awake()
     {
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
+        instance = this;
 
         respawn = GetComponent<Respawn>();
         countdown = GetComponent<Countdown>();
@@ -54,7 +55,7 @@ public class LoopManagerScript : MonoBehaviour
 
     private void Start()
     {
-        if (loopList[0].startClip != null)
+        if (loopList[0].startClip != null && playAnnouncement)
             annoucerSource.PlayOverride(loopList[0].startClip);
 
         for(int i = 0; i < loopList.Count; i++)
@@ -74,7 +75,7 @@ public class LoopManagerScript : MonoBehaviour
             respawn.RespawnPlayer();
 
             GetNextLoop();
-            LoopChange();
+            await LoopChange();
 
             loopTimer = loopList[currentLoop].GetLoopTimer();
 
@@ -87,7 +88,6 @@ public class LoopManagerScript : MonoBehaviour
     private void Update()
     {
         StartNextLoop();
-
     }
 
 
@@ -103,12 +103,22 @@ public class LoopManagerScript : MonoBehaviour
     {
         if (currentLoop >= loopList.Count)
         {
+            playAnnouncement = false;
+
             Debug.Log("GameOver");
             //loopList[currentLoop].gameObject.SetActive(false);
             //loopList[0].gameObject.SetActive(true);
             currentLoop = 0;
             MultiAudioManager.PlayAudioObject(deathSFX, transform.position);
+
+            listMaterial[0].SetFloat("_Fade", 1.0f);
+
+            onGameOver?.Invoke();
+
+            player.GetComponent<PlayerInput>().enabled = false;
+
             await new WaitForSeconds(deathSFX.clips[0].length + 1);
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             listMaterial.ForEach((x) => {
                 x.SetFloat("_Fade", 0.0f);
@@ -121,7 +131,7 @@ public class LoopManagerScript : MonoBehaviour
             loopList[currentLoop].gameObject.SetActive(true);
             loopList[currentLoop - 1].gameObject.SetActive(false);
 
-            if (loopList[currentLoop].startClip != null)
+            if (loopList[currentLoop].startClip != null && playAnnouncement)
                 annoucerSource.PlayOverride(loopList[currentLoop].startClip);
 
             onLoopStart?.Invoke();

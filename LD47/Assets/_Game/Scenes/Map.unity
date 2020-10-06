@@ -60162,13 +60162,17 @@ PrefabInstance:
         type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 8455195313790759935, guid: d19bc0e8d87daff4ea81f5fc63399862,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8455195313790759935, guid: d19bc0e8d87daff4ea81f5fc63399862,
         type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 2129518941}
+    - target: {fileID: 8455195313790759935, guid: d19bc0e8d87daff4ea81f5fc63399862,
+        type: 3}
+      propertyPath: joystickLookInputMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8455195313884904396, guid: d19bc0e8d87daff4ea81f5fc63399862,
         type: 3}
       propertyPath: m_Lens.NearClipPlane
